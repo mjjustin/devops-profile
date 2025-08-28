@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justin Jose - AWS & Kubernetes DevOps Architect</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="orangebytes-logo.png">
+  <style>
+    body {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #e0e0e0;
+      font-family: 'Inter', sans-serif;
+    }
+    .glow {
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    }
+    .neon-text {
+      text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+    }
+    .section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-opacity-90 bg-gray-900 z-50 py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div class="w-32">
+        <!-- Logo file saved as orangebytes-logo.png in the repo -->
+        <img src="orangebytes-logo.png" alt="OrangeBytes Logo" class="w-full">
+      </div>
+      <div class="space-x-6">
+        <a href="#home" class="text-cyan-400 hover:text-cyan-200 transition">Home</a>
+        <a href="#services" class="text-cyan-400 hover:text-cyan-200 transition">Services</a>
+        <a href="#technologies" class="text-cyan-400 hover:text-cyan-200 transition">Technologies</a>
+        <a href="#about" class="text-cyan-400 hover:text-cyan-200 transition">About</a>
+        <a href="#contact" class="text-cyan-400 hover:text-cyan-200 transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center text-center pt-16">
+    <div class="container mx-auto px-4 section">
+      <h1 class="text-5xl md:text-7xl font-extrabold neon-text mb-4">Justin Jose</h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-6">AWS Cloud Architect & Kubernetes Specialist</p>
+      <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+        From system kernel to cloud orchestration - a unique journey through every layer of modern infrastructure.
+      </p>
+      <div class="mt-8 space-x-4">
+        <a href="#contact" class="inline-block bg-cyan-500 text-gray-900 font-bold py-3 px-6 rounded-full glow hover:bg-cyan-400 transition">Get Consultation</a>
+        <a href="#services" class="inline-block border border-cyan-500 text-cyan-500 font-bold py-3 px-6 rounded-full hover:bg-cyan-500 hover:text-gray-900 transition">View Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20">
+    <div class="container mx-auto px-4 section">
+      <h2 class="text-4xl font-bold text-center neon-text mb-12">Expertise & Services</h2>
+      <p class="text-center text-gray-400 mb-12">Comprehensive DevOps solutions tailored to accelerate your digital transformation</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-800 p-6 rounded-lg glow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold text-cyan-400 mb-4">AWS Cloud Architecture</h3>
+          <p class="text-gray-300">Expert design and implementation of scalable AWS solutions with deep cloud-native expertise.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg glow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold text-cyan-400 mb-4">Private Cloud (OpenStack)</h3>
+          <p class="text-gray-300">Expert OpenStack deployment and management across multiple versions for private cloud infrastructure.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg glow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold text-cyan-400 mb-4">Infrastructure as Code</h3>
+          <p class="text-gray-300">Terraform and AWS CloudFormation for infrastructure automation and management.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg glow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold text-cyan-400 mb-4">CI/CD Pipelines</h3>
+          <p class="text-gray-300">Automated deployment pipelines with AWS CodePipeline, Jenkins, and GitLab CI.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg glow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold text-cyan-400 mb-4">Kubernetes Orchestration</h3>
+          <p class="text-gray-300">Advanced Kubernetes deployments, scaling, and management for containerized applications.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg glow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold text-cyan-400 mb-4">Monitoring & Logging</h3>
+          <p class="text-gray-300">Comprehensive observability with CloudWatch, Prometheus, Grafana, and ELK Stack.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section id="technologies" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4 section">
+      <h2 class="text-4xl font-bold text-center neon-text mb-12">Technologies & Tools</h2>
+      <p class="text-center text-gray-400 mb-12">Leveraging the latest tools and technologies to deliver robust solutions</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">AWS</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Kubernetes</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Docker</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">OpenStack</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Terraform</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">AWS EKS</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">AWS CloudFormation</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">AWS CodePipeline</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">AWS CloudWatch</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Prometheus</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Grafana</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">ELK Stack</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Jenkins</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">GitLab CI</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">GitHub Actions</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Helm</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Istio</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">AWS Lambda</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">EC2</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">S3</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">RDS</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">VPC</div>
+        <div class="text-center text-gray-300 hover:text-cyan-200 transition">IAM</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">C Programming</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Linux Kernel</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">KVM</div>
+        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Ansible</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20">
+    <div class="container mx-auto px-4 section">
+      <h2 class="text-4xl font-bold text-center neon-text mb-12">Building the Future</h2>
+      <p class="text-center text-gray-400 max-w-3xl mx-auto mb-12">
+        My unique journey: C programmer → Router/Switch programming → OpenStack engineer → SRE → Infrastructure Engineer → DevOps Architect. Deep expertise from kernel level to cloud orchestration.
+      </p>
+      <p class="text-center text-gray-400 max-w-3xl mx-auto mb-12">
+        This foundation gives me unmatched insight into every layer: Kernel → Linux → Virtualization → Containers → Kubernetes. I architect solutions understanding the complete stack.
+      </p>
+      <h3 class="text-2xl font-semibold text-center text-cyan-400 mb-8">Why Choose Me?</h3>
+      <ul class="list-disc text-gray-300 max-w-2xl mx-auto space-y-2">
+        <li>Started as C programmer - deep systems knowledge</li>
+        <li>OpenStack expert across multiple versions & deployments</li>
+        <li>AWS & Kubernetes certified professional</li>
+        <li>Complete stack mastery: Kernel → Containers → Cloud</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4 section">
+      <h2 class="text-4xl font-bold text-center neon-text mb-12">Let's Connect</h2>
+      <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12">
+        Ready to transform your infrastructure? Let's discuss how we can accelerate your DevOps journey and build scalable solutions together.
+      </p>
+      <div class="text-center text-gray-300 space-y-4">
+        <p><strong>Email:</strong> <a href="mailto:justin@orangebytes.io" class="text-cyan-400 hover:text-cyan-200">justin@orangebytes.io</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+31685655527" class="text-cyan-400 hover:text-cyan-200">+31-685655527</a></p>
+        <p><strong>Location:</strong> Available Worldwide (Current: Netherlands)</p>
+      </div>
+      <div class="text-center mt-8">
+        <a href="mailto:justin@orangebytes.io" class="inline-block bg-cyan-500 text-gray-900 font-bold py-3 px-6 rounded-full glow hover:bg-cyan-400 transition">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-800 text-center text-gray-400">
+    <p>&copy; 2025 Justin Jose. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
