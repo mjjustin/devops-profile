@@ -83,15 +83,21 @@ body {
 
 /* ---------- Glassmorphism Cards ---------- */
 .glass-card {
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
   padding: 2rem;
   transition: var(--transition-smooth);
   position: relative;
   overflow: hidden;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .glass-card::before {
@@ -101,16 +107,27 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-orange), transparent);
-  opacity: 0.5;
+  background: linear-gradient(90deg, transparent 10%, rgba(255, 255, 255, 0.4) 50%, transparent 90%);
+}
+
+.glass-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .glass-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--accent-orange);
+  transform: translateY(-12px) rotateX(2deg);
+  border-color: rgba(255, 102, 0, 0.5);
   box-shadow:
-    0 25px 50px -12px rgba(255, 102, 0, 0.15),
-    0 0 40px rgba(255, 102, 0, 0.1);
+    0 35px 70px -15px rgba(255, 102, 0, 0.25),
+    0 0 50px rgba(255, 102, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 /* ---------- Glow Effects ---------- */
@@ -606,19 +623,42 @@ nav.scrolled {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  perspective: 1000px;
 }
 
 .skill-category {
-  background: var(--card-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(30, 25, 20, 0.85) 0%, rgba(15, 12, 8, 0.9) 100%);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
   padding: 2rem;
-  transition: var(--transition-smooth);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 10%, rgba(255, 102, 0, 0.3) 50%, transparent 90%);
 }
 
 .skill-category:hover {
-  border-color: var(--accent-orange);
-  transform: translateY(-5px);
+  border-color: rgba(255, 102, 0, 0.4);
+  transform: translateY(-10px) rotateX(3deg) scale(1.02);
+  box-shadow:
+    0 30px 60px rgba(255, 102, 0, 0.15),
+    0 0 40px rgba(255, 102, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .skill-category-title {
@@ -631,6 +671,7 @@ nav.scrolled {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  text-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
 }
 
 .skill-category-title::before {
@@ -638,8 +679,9 @@ nav.scrolled {
   display: block;
   width: 30px;
   height: 3px;
-  background: var(--accent-orange);
+  background: linear-gradient(90deg, var(--accent-orange), var(--accent-amber));
   border-radius: 2px;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
 }
 
 .skill-tags {
@@ -649,24 +691,33 @@ nav.scrolled {
 }
 
 .skill-tag {
-  background: rgba(255, 102, 0, 0.1);
-  border: 1px solid rgba(255, 102, 0, 0.3);
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.15) 0%, rgba(255, 102, 0, 0.08) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 102, 0, 0.25);
+  border-radius: 12px;
+  padding: 0.6rem 1.2rem;
   font-size: 0.9rem;
   color: var(--text-primary);
-  transition: var(--transition-smooth);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .skill-tag:hover {
-  background: rgba(255, 102, 0, 0.2);
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.3) 0%, rgba(255, 102, 0, 0.15) 100%);
   border-color: var(--accent-orange);
-  transform: translateY(-2px);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow:
+    0 10px 30px rgba(255, 102, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 20px rgba(255, 102, 0, 0.2);
 }
 
 .skill-tag.highlight {
-  background: linear-gradient(135deg, rgba(255, 102, 0, 0.2), rgba(123, 44, 191, 0.2));
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.25), rgba(230, 92, 0, 0.15));
   border-color: var(--accent-orange);
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.3);
 }
 
 /* ---------- Services Section ---------- */
@@ -674,16 +725,23 @@ nav.scrolled {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  perspective: 1000px;
 }
 
 .service-card {
-  background: var(--card-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(30, 25, 20, 0.9) 0%, rgba(15, 12, 8, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
   padding: 2rem;
-  transition: var(--transition-smooth);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   position: relative;
   overflow: hidden;
+  transform-style: preserve-3d;
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .service-card::before {
@@ -693,31 +751,76 @@ nav.scrolled {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-orange), var(--accent-amber));
+  background: linear-gradient(90deg, var(--accent-orange), var(--accent-amber), var(--accent-orange));
+  background-size: 200% auto;
   transform: scaleX(0);
   transition: var(--transition-smooth);
 }
 
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 102, 0, 0.15) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
 .service-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--accent-orange);
-  box-shadow: 0 25px 60px rgba(255, 102, 0, 0.15);
+  transform: translateY(-15px) rotateX(5deg) rotateY(-2deg) scale(1.02);
+  border-color: rgba(255, 102, 0, 0.4);
+  box-shadow:
+    0 40px 80px rgba(255, 102, 0, 0.2),
+    0 0 60px rgba(255, 102, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .service-card:hover::before {
   transform: scaleX(1);
+  animation: gradient-slide 2s linear infinite;
+}
+
+.service-card:hover::after {
+  opacity: 1;
+}
+
+@keyframes gradient-slide {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .service-icon {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, rgba(255, 102, 0, 0.2), rgba(123, 44, 191, 0.2));
-  border-radius: 16px;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.25), rgba(230, 92, 0, 0.15));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 102, 0, 0.3);
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 1.5rem;
+  box-shadow:
+    0 8px 24px rgba(255, 102, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: var(--transition-smooth);
+}
+
+.service-card:hover .service-icon {
+  transform: translateZ(20px) rotateY(-5deg);
+  box-shadow:
+    0 15px 40px rgba(255, 102, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .service-title {
