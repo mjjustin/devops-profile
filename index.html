@@ -1,181 +1,557 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Justin Jose - AWS & Kubernetes DevOps Architect / DevOps Lead </title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Justin Jose - DevOps Architect & Technical Leader | AWS & Kubernetes Expert</title>
+  <meta name="description"
+    content="DevOps Architect with 15+ years experience. AWS & Kubernetes certified. From kernel-level programming to cloud architecture. Available for consulting worldwide.">
+  <meta name="keywords" content="DevOps Architect, AWS, Kubernetes, Cloud Architecture, Technical Lead, Infrastructure">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="orangebytes-logo.png">
-  <style>
-    body {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-      color: #e0e0e0;
-      font-family: 'Inter', sans-serif;
-    }
-    .glow {
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-    }
-    .neon-text {
-      text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
-    }
-    .section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s ease-out;
-    }
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="min-h-screen flex flex-col">
+
+<body>
+  <!-- Particles Background -->
+  <div id="particles-js"></div>
+
   <!-- Navigation -->
-  <nav class="fixed top-0 w-full bg-opacity-90 bg-gray-900 z-50 py-4">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <div class="w-32">
-        <!-- Logo file saved as orangebytes-logo.png in the repo -->
-        <img src="orangebytes-logo.png" alt="OrangeBytes Logo" class="w-full">
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home">
+        <img src="orangebytes-logo.png" alt="OrangeBytes" class="nav-logo">
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#journey">Journey</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
       </div>
-      <div class="space-x-6">
-        <a href="#home" class="text-cyan-400 hover:text-cyan-200 transition">Home</a>
-        <a href="#services" class="text-cyan-400 hover:text-cyan-200 transition">Services</a>
-        <a href="#technologies" class="text-cyan-400 hover:text-cyan-200 transition">Technologies</a>
-        <a href="#about" class="text-cyan-400 hover:text-cyan-200 transition">About</a>
-        <a href="#contact" class="text-cyan-400 hover:text-cyan-200 transition">Contact</a>
+      <div class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex items-center justify-center text-center pt-16">
-    <div class="container mx-auto px-4 section">
-      <h1 class="text-5xl md:text-7xl font-extrabold neon-text mb-4">Justin Jose</h1>
-      <p class="text-xl md:text-2xl text-gray-300 mb-6">AWS Cloud Architect & Kubernetes Specialist</p>
-      <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-        From system kernel to cloud orchestration - a unique journey through every layer of modern infrastructure.
+  <section id="home" class="hero">
+    <div class="hero-content section">
+      <div class="hero-badge">
+        <span>✦</span>
+        <span>16+ Years Experience</span>
+        <span>✦</span>
+      </div>
+      <h1 class="neon-text">Justin Jose</h1>
+      <div class="hero-title-typing">
+        <span id="typingText"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-subtitle">
+        From system kernel to cloud orchestration — a unique journey through every layer of modern infrastructure.
+        Architecting scalable solutions with deep expertise from kernel → containers → cloud.
       </p>
-      <div class="mt-8 space-x-4">
-        <a href="#contact" class="inline-block bg-cyan-500 text-gray-900 font-bold py-3 px-6 rounded-full glow hover:bg-cyan-400 transition">Get Consultation</a>
-        <a href="#services" class="inline-block border border-cyan-500 text-cyan-500 font-bold py-3 px-6 rounded-full hover:bg-cyan-500 hover:text-gray-900 transition">View Portfolio</a>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">
+          <span>🚀</span> Get Consultation
+        </a>
+        <a href="#experience" class="btn btn-secondary">
+          <span>📋</span> View Experience
+        </a>
+        <a href="Justin_-_DevOps_Architect .pdf" download class="btn btn-secondary">
+          <span>📄</span> Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar">
+    <div class="stats-container">
+      <div class="stat-item section">
+        <div class="stat-number" data-target="16">0</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item section">
+        <div class="stat-number" data-target="7">0</div>
+        <div class="stat-label">Companies Served</div>
+      </div>
+      <div class="stat-item section">
+        <div class="stat-number">CKA</div>
+        <div class="stat-label">Kubernetes Certified</div>
+      </div>
+      <div class="stat-item section">
+        <div class="stat-number">AWS</div>
+        <div class="stat-label">Solutions Architect</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey Section -->
+  <section id="journey" class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="neon-text">From Kernel to Cloud</h2>
+        <p>A rare journey through every layer of the modern infrastructure stack</p>
+      </div>
+
+      <div class="journey-visual">
+        <div class="journey-step">
+          <div class="journey-icon">⚙️</div>
+          <span class="journey-label">C Programming</span>
+        </div>
+        <div class="journey-arrow">→</div>
+        <div class="journey-step">
+          <div class="journey-icon">🐧</div>
+          <span class="journey-label">Linux Kernel</span>
+        </div>
+        <div class="journey-arrow">→</div>
+        <div class="journey-step">
+          <div class="journey-icon">💻</div>
+          <span class="journey-label">Embedded Systems</span>
+        </div>
+        <div class="journey-arrow">→</div>
+        <div class="journey-step">
+          <div class="journey-icon">🔲</div>
+          <span class="journey-label">Virtualization</span>
+        </div>
+        <div class="journey-arrow">→</div>
+        <div class="journey-step">
+          <div class="journey-icon">🐳</div>
+          <span class="journey-label">Containers</span>
+        </div>
+        <div class="journey-arrow">→</div>
+        <div class="journey-step">
+          <div class="journey-icon">☸️</div>
+          <span class="journey-label">Kubernetes</span>
+        </div>
+        <div class="journey-arrow">→</div>
+        <div class="journey-step">
+          <div class="journey-icon">☁️</div>
+          <span class="journey-label">Cloud Architect</span>
+        </div>
+      </div>
+
+      <div class="glass-card" style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8;">
+          <span style="color: var(--accent-cyan); font-weight: 600;">Why does this matter?</span><br>
+          This complete stack journey means I understand and can debug at every layer — from kernel syscalls to
+          container networking to cloud IAM policies.
+          When things break, I find the root cause, not just the symptoms.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Timeline -->
+  <section id="experience" class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="neon-text">Career Timeline</h2>
+        <p>Progressive leadership roles building towards architecture excellence</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Current Role -->
+        <div class="timeline-item">
+          <div class="timeline-dot current"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Jan 2025 — Present</div>
+            <h3 class="timeline-title">DevOps Architect</h3>
+            <p class="timeline-company">On Air • Utrecht, Netherlands</p>
+            <ul class="timeline-highlights">
+              <li>Designed scalable architecture for global streaming services with high availability</li>
+              <li>Developed and deployed Voice and Chat AI agents for customer support</li>
+              <li>Built big data pipelines for Google BigQuery analytics and insights</li>
+              <li>Integrated vulnerability scanning and established penetration testing strategy</li>
+              <li>Enabled automation testing adoption with CI/CD pipeline integration</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Wartsila -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Jun 2021 — Jan 2025</div>
+            <h3 class="timeline-title">Senior DevOps Engineer</h3>
+            <p class="timeline-company">Wartsila • Drunen, Netherlands</p>
+            <ul class="timeline-highlights">
+              <li>Drove DevOps culture transformation across the organization</li>
+              <li>Managed Kubernetes clusters at scale (EKS, Kops, Rancher, Terraform)</li>
+              <li>Built IaC solutions using Terraform HCL and CDK</li>
+              <li>Deployed Pega Systems in Kubernetes using Terraform and Helm</li>
+              <li>Implemented observability with Datadog and managed Kafka clusters</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mijndomein -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Jul 2017 — May 2021</div>
+            <h3 class="timeline-title">Senior Systems Engineer</h3>
+            <p class="timeline-company">Mijndomein • Lelystad, Netherlands</p>
+            <ul class="timeline-highlights">
+              <li>Led design and implementation of Kubernetes infrastructure project</li>
+              <li>Deployed Kubernetes on GKE, EKS, and using KOPS</li>
+              <li>Managed OpenStack-based cloud product development</li>
+              <li>Implemented monitoring with Thanos, Prometheus, and Grafana</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Nokia -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Dec 2016 — Jun 2017</div>
+            <h3 class="timeline-title">Technical Lead</h3>
+            <p class="timeline-company">Nokia • Chennai, India</p>
+            <ul class="timeline-highlights">
+              <li>Led deployment of CBIS and CBAM OpenStack platforms</li>
+              <li>Managed customer requirements and data center implementations</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 6Wind -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Mar 2014 — Sept 2016</div>
+            <h3 class="timeline-title">Senior Software Engineer</h3>
+            <p class="timeline-company">6Wind • Paris, France</p>
+            <ul class="timeline-highlights">
+              <li>OpenStack deployments across diverse hardware environments</li>
+              <li>Automated OpenStack configuration with Python and Bash</li>
+              <li>Configured complex networking: OVS, Linux Bridge, VLAN, VXLAN, GRE</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HCL -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Aug 2013 — Feb 2014</div>
+            <h3 class="timeline-title">Lead Engineer</h3>
+            <p class="timeline-company">HCL Technologies • Chennai, India</p>
+            <ul class="timeline-highlights">
+              <li>Led development for Cisco Catalyst 3K switches</li>
+              <li>Managed troubleshooting and bug fixing teams</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Accel -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Mar 2010 — Jul 2013</div>
+            <h3 class="timeline-title">Software Engineer</h3>
+            <p class="timeline-company">Accel Frontline • Cochin, India</p>
+            <ul class="timeline-highlights">
+              <li>Led SDN project for multi-core Tilera architecture devices</li>
+              <li>Developed LLDP and LACP protocols for network switches</li>
+              <li>Built minimal Debian filesystem for embedded devices</li>
+              <li>C programming for CLI development on embedded systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="neon-text">Technical Expertise</h2>
+        <p>Architect-level competencies across the full infrastructure stack</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-category-title">Platform Architecture</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Kubernetes</span>
+            <span class="skill-tag highlight">AWS EKS</span>
+            <span class="skill-tag">GKE</span>
+            <span class="skill-tag">Kops</span>
+            <span class="skill-tag">Rancher</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">OpenStack</span>
+            <span class="skill-tag">KVM</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">Cloud Services (AWS)</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">EKS</span>
+            <span class="skill-tag highlight">EC2</span>
+            <span class="skill-tag">RDS</span>
+            <span class="skill-tag">S3</span>
+            <span class="skill-tag">VPC</span>
+            <span class="skill-tag">IAM</span>
+            <span class="skill-tag">Lambda</span>
+            <span class="skill-tag">CloudWatch</span>
+            <span class="skill-tag">ECR</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">Infrastructure as Code</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Terraform</span>
+            <span class="skill-tag">Terraform CDK</span>
+            <span class="skill-tag">CloudFormation</span>
+            <span class="skill-tag highlight">Helm</span>
+            <span class="skill-tag">Ansible</span>
+            <span class="skill-tag">Kops</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">CI/CD & DevOps</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">GitLab CI</span>
+            <span class="skill-tag">Bamboo</span>
+            <span class="skill-tag">BitBucket Pipelines</span>
+            <span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">Jenkins</span>
+            <span class="skill-tag">ArgoCD</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">Observability</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Prometheus</span>
+            <span class="skill-tag highlight">Grafana</span>
+            <span class="skill-tag">Thanos</span>
+            <span class="skill-tag">Datadog</span>
+            <span class="skill-tag">ELK Stack</span>
+            <span class="skill-tag">CloudWatch</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">Programming & Systems</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Python</span>
+            <span class="skill-tag highlight">Bash</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">Linux Kernel</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Git</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">Data & Streaming</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Kafka</span>
+            <span class="skill-tag">BigQuery</span>
+            <span class="skill-tag">ClickHouse</span>
+            <span class="skill-tag">Data Pipelines</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">Security</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Orca Security</span>
+            <span class="skill-tag">Vulnerability Scanning</span>
+            <span class="skill-tag">Penetration Testing</span>
+            <span class="skill-tag">IAM Policies</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="neon-text">Certifications</h2>
+        <p>Industry-recognized credentials validating cloud-native expertise</p>
+      </div>
+
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-badge">☸️</div>
+          <h3 class="cert-title">CKA</h3>
+          <p class="cert-subtitle">Certified Kubernetes Administrator</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge">☁️</div>
+          <h3 class="cert-title">AWS SA</h3>
+          <p class="cert-subtitle">AWS Certified Solutions Architect</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="py-20">
-    <div class="container mx-auto px-4 section">
-      <h2 class="text-4xl font-bold text-center neon-text mb-12">Expertise & Services</h2>
-      <p class="text-center text-gray-400 mb-12">Comprehensive DevOps solutions tailored to accelerate your digital transformation</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-gray-800 p-6 rounded-lg glow hover:scale-105 transition">
-          <h3 class="text-xl font-semibold text-cyan-400 mb-4">AWS Cloud Architecture</h3>
-          <p class="text-gray-300">Expert design and implementation of scalable AWS solutions with deep cloud-native expertise.</p>
+  <section id="services" class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="neon-text">Services</h2>
+        <p>Comprehensive DevOps solutions tailored to accelerate your digital transformation</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏗️</div>
+          <h3 class="service-title">Platform Architecture Design</h3>
+          <p class="service-description">
+            Design scalable, multi-cloud architectures. Expert in AWS, Kubernetes, and hybrid cloud solutions with focus
+            on high availability and cost optimization.
+          </p>
         </div>
-        <div class="bg-gray-800 p-6 rounded-lg glow hover:scale-105 transition">
-          <h3 class="text-xl font-semibold text-cyan-400 mb-4">Private Cloud (OpenStack)</h3>
-          <p class="text-gray-300">Expert OpenStack deployment and management across multiple versions for private cloud infrastructure.</p>
+
+        <div class="service-card">
+          <div class="service-icon">🔄</div>
+          <h3 class="service-title">DevOps Transformation</h3>
+          <p class="service-description">
+            Drive DevOps culture change across your organization. Implement best practices, automation, and modern
+            delivery pipelines.
+          </p>
         </div>
-        <div class="bg-gray-800 p-6 rounded-lg glow hover:scale-105 transition">
-          <h3 class="text-xl font-semibold text-cyan-400 mb-4">Infrastructure as Code</h3>
-          <p class="text-gray-300">Terraform and AWS CloudFormation for infrastructure automation and management.</p>
+
+        <div class="service-card">
+          <div class="service-icon">☸️</div>
+          <h3 class="service-title">Kubernetes Orchestration</h3>
+          <p class="service-description">
+            Deploy and manage production Kubernetes clusters. EKS, GKE, and self-managed clusters with Helm, Terraform,
+            and GitOps workflows.
+          </p>
         </div>
-        <div class="bg-gray-800 p-6 rounded-lg glow hover:scale-105 transition">
-          <h3 class="text-xl font-semibold text-cyan-400 mb-4">CI/CD Pipelines</h3>
-          <p class="text-gray-300">Automated deployment pipelines with AWS CodePipeline, Jenkins, and GitLab CI.</p>
+
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3 class="service-title">Infrastructure as Code</h3>
+          <p class="service-description">
+            Build maintainable infrastructure with Terraform, CloudFormation, and Ansible. Implement IaC best practices
+            and modular architectures.
+          </p>
         </div>
-        <div class="bg-gray-800 p-6 rounded-lg glow hover:scale-105 transition">
-          <h3 class="text-xl font-semibold text-cyan-400 mb-4">Kubernetes Orchestration</h3>
-          <p class="text-gray-300">Advanced Kubernetes deployments, scaling, and management for containerized applications.</p>
+
+        <div class="service-card">
+          <div class="service-icon">🚀</div>
+          <h3 class="service-title">CI/CD Pipeline Design</h3>
+          <p class="service-description">
+            Automated deployment pipelines with GitLab CI, GitHub Actions, and Bamboo. Security scanning, testing
+            automation, and reliable releases.
+          </p>
         </div>
-        <div class="bg-gray-800 p-6 rounded-lg glow hover:scale-105 transition">
-          <h3 class="text-xl font-semibold text-cyan-400 mb-4">Monitoring & Logging</h3>
-          <p class="text-gray-300">Comprehensive observability with CloudWatch, Prometheus, Grafana, and ELK Stack.</p>
+
+        <div class="service-card">
+          <div class="service-icon">📊</div>
+          <h3 class="service-title">Observability & Monitoring</h3>
+          <p class="service-description">
+            Full-stack observability with Prometheus, Grafana, Datadog, and ELK. Alerting strategies, dashboards, and
+            performance optimization.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🤖</div>
+          <h3 class="service-title">AI/ML Infrastructure</h3>
+          <p class="service-description">
+            Deploy AI agents and ML pipelines. Experience with Voice/Chat AI systems and BigQuery data analytics
+            infrastructure.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🔐</div>
+          <h3 class="service-title">Security Architecture</h3>
+          <p class="service-description">
+            Implement security best practices. Vulnerability scanning, penetration testing strategy, and secure CI/CD
+            workflows.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Technologies Section -->
-  <section id="technologies" class="py-20 bg-gray-900">
-    <div class="container mx-auto px-4 section">
-      <h2 class="text-4xl font-bold text-center neon-text mb-12">Technologies & Tools</h2>
-      <p class="text-center text-gray-400 mb-12">Leveraging the latest tools and technologies to deliver robust solutions</p>
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">AWS</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Kubernetes</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Docker</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">OpenStack</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Terraform</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">AWS EKS</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">AWS CloudFormation</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">AWS CodePipeline</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">AWS CloudWatch</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Prometheus</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Grafana</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">ELK Stack</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Jenkins</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">GitLab CI</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">GitHub Actions</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Helm</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Istio</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">AWS Lambda</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">EC2</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">S3</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">RDS</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">VPC</div>
-        <div class="text-center text-gray-300 hover:text-cyan-200 transition">IAM</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">C Programming</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Linux Kernel</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">KVM</div>
-        <div class="text-center text-gray-300 hover:text-cyan-400 transition">Ansible</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-20">
-    <div class="container mx-auto px-4 section">
-      <h2 class="text-4xl font-bold text-center neon-text mb-12">Building the Future</h2>
-      <p class="text-center text-gray-400 max-w-3xl mx-auto mb-12">
-        My unique journey: C programmer → Router/Switch programming → OpenStack engineer → SRE → Infrastructure Engineer → DevOps Architect. Deep expertise from kernel level to cloud orchestration.
-      </p>
-      <p class="text-center text-gray-400 max-w-3xl mx-auto mb-12">
-        This foundation gives me unmatched insight into every layer: Kernel → Linux → Virtualization → Containers → Kubernetes. I architect solutions understanding the complete stack.
-      </p>
-      <h3 class="text-2xl font-semibold text-center text-cyan-400 mb-8">Why Choose Me?</h3>
-      <ul class="list-disc text-gray-300 max-w-2xl mx-auto space-y-2">
-        <li>Started as C programmer - deep systems knowledge</li>
-        <li>OpenStack expert across multiple versions & deployments</li>
-        <li>AWS & Kubernetes certified professional</li>
-        <li>Complete stack mastery: Kernel → Containers → Cloud</li>
-      </ul>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gray-900">
-    <div class="container mx-auto px-4 section">
-      <h2 class="text-4xl font-bold text-center neon-text mb-12">Let's Connect</h2>
-      <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12">
-        Ready to transform your infrastructure? Let's discuss how we can accelerate your DevOps journey and build scalable solutions together.
-      </p>
-      <div class="text-center text-gray-300 space-y-4">
-        <p><strong>Email:</strong> <a href="mailto:justin@orangebytes.io" class="text-cyan-400 hover:text-cyan-200">justin@orangebytes.io</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+31685655527" class="text-cyan-400 hover:text-cyan-200">+31-685655527</a></p>
-        <p><strong>Location:</strong> Available Worldwide (Current: Netherlands)</p>
+  <section id="contact" class="section contact-section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="neon-text">Let's Connect</h2>
+        <p>Ready to transform your infrastructure? Let's discuss how we can accelerate your DevOps journey.</p>
       </div>
-      <div class="text-center mt-8">
-        <a href="mailto:justin@orangebytes.io" class="inline-block bg-cyan-500 text-gray-900 font-bold py-3 px-6 rounded-full glow hover:bg-cyan-400 transition">Contact Me</a>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div class="contact-info">
+            <div class="contact-label">Email</div>
+            <a href="mailto:justin@orangebytes.io">justin@orangebytes.io</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div class="contact-info">
+            <div class="contact-label">Phone</div>
+            <a href="tel:+31685655527">+31-685655527</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">💼</div>
+          <div class="contact-info">
+            <div class="contact-label">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/justin-jose-9b63863a/" target="_blank">View Profile</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-info">
+            <div class="contact-label">Location</div>
+            <span style="color: var(--text-secondary);">Netherlands (Available Worldwide)</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="mailto:justin@orangebytes.io" class="btn btn-primary">
+          <span>💬</span> Start a Conversation
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-6 bg-gray-800 text-center text-gray-400">
+  <footer>
     <p>&copy; 2025 Justin Jose. All rights reserved.</p>
   </footer>
 
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- Main Script -->
   <script src="script.js"></script>
 </body>
+
 </html>
