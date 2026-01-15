@@ -1,21 +1,22 @@
 /* ========================================
    Justin Jose - DevOps Architect Portfolio
-   Premium Futuristic Design System
+   Orange Bytes - Premium Futuristic Design
    ======================================== */
 
 /* ---------- CSS Variables ---------- */
 :root {
-  --primary-gradient: linear-gradient(135deg, #0a0a1a 0%, #0f1629 50%, #1a1a2e 100%);
-  --accent-cyan: #00f0ff;
-  --accent-cyan-glow: rgba(0, 240, 255, 0.5);
-  --accent-purple: #7b2cbf;
-  --accent-gold: #f0a500;
+  --primary-gradient: linear-gradient(135deg, #0a0a0a 0%, #1a0d00 50%, #0d0d0d 100%);
+  --accent-orange: #ff6600;
+  --accent-orange-light: #ff7722;
+  --accent-orange-glow: rgba(255, 102, 0, 0.5);
+  --accent-gold: #ff8533;
+  --accent-amber: #e65c00;
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
   --text-primary: #ffffff;
   --text-secondary: #a0aec0;
   --text-muted: #718096;
-  --card-bg: rgba(15, 22, 41, 0.8);
+  --card-bg: rgba(20, 12, 5, 0.8);
   --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -52,7 +53,7 @@ body {
 
 /* ---------- Typography ---------- */
 .neon-text {
-  background: linear-gradient(90deg, var(--accent-cyan), #00c8ff, var(--accent-cyan));
+  background: linear-gradient(90deg, var(--accent-orange), #ff7722, var(--accent-orange));
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -62,12 +63,19 @@ body {
 }
 
 @keyframes shimmer {
-  0%, 100% { background-position: 0% center; }
-  50% { background-position: 200% center; }
+
+  0%,
+  100% {
+    background-position: 0% center;
+  }
+
+  50% {
+    background-position: 200% center;
+  }
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-amber));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -93,31 +101,31 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+  background: linear-gradient(90deg, transparent, var(--accent-orange), transparent);
   opacity: 0.5;
 }
 
 .glass-card:hover {
   transform: translateY(-8px);
-  border-color: var(--accent-cyan);
-  box-shadow: 
-    0 25px 50px -12px rgba(0, 240, 255, 0.15),
-    0 0 40px rgba(0, 240, 255, 0.1);
+  border-color: var(--accent-orange);
+  box-shadow:
+    0 25px 50px -12px rgba(255, 102, 0, 0.15),
+    0 0 40px rgba(255, 102, 0, 0.1);
 }
 
 /* ---------- Glow Effects ---------- */
 .glow {
-  box-shadow: 
+  box-shadow:
     0 0 20px var(--accent-cyan-glow),
-    0 0 40px rgba(0, 240, 255, 0.2);
+    0 0 40px rgba(255, 102, 0, 0.2);
   transition: var(--transition-smooth);
 }
 
 .glow:hover {
-  box-shadow: 
+  box-shadow:
     0 0 30px var(--accent-cyan-glow),
-    0 0 60px rgba(0, 240, 255, 0.3),
-    0 0 100px rgba(0, 240, 255, 0.1);
+    0 0 60px rgba(255, 102, 0, 0.3),
+    0 0 100px rgba(255, 102, 0, 0.1);
 }
 
 /* ---------- Navigation ---------- */
@@ -182,12 +190,12 @@ nav.scrolled {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--accent-cyan);
+  background: var(--accent-orange);
   transition: var(--transition-smooth);
 }
 
 .nav-links a:hover {
-  color: var(--accent-cyan);
+  color: var(--accent-orange);
 }
 
 .nav-links a:hover::after {
@@ -206,7 +214,7 @@ nav.scrolled {
 .mobile-menu-btn span {
   width: 25px;
   height: 2px;
-  background: var(--accent-cyan);
+  background: var(--accent-orange);
   transition: var(--transition-smooth);
 }
 
@@ -230,19 +238,26 @@ nav.scrolled {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(0, 240, 255, 0.1);
-  border: 1px solid var(--accent-cyan);
+  background: rgba(255, 102, 0, 0.1);
+  border: 1px solid var(--accent-orange);
   border-radius: 50px;
   padding: 0.5rem 1.5rem;
   font-size: 0.9rem;
-  color: var(--accent-cyan);
+  color: var(--accent-orange);
   margin-bottom: 1.5rem;
   animation: pulse-border 2s ease-in-out infinite;
 }
 
 @keyframes pulse-border {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 240, 255, 0.4); }
-  50% { box-shadow: 0 0 0 10px rgba(0, 240, 255, 0); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 102, 0, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 102, 0, 0);
+  }
 }
 
 .hero h1 {
@@ -257,7 +272,7 @@ nav.scrolled {
   display: block;
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 600;
-  color: var(--accent-cyan);
+  color: var(--accent-orange);
   height: 2.5rem;
   margin-bottom: 1.5rem;
 }
@@ -292,24 +307,24 @@ nav.scrolled {
 }
 
 .btn-primary {
-  background: var(--accent-cyan);
+  background: var(--accent-orange);
   color: #0a0a1a;
 }
 
 .btn-primary:hover {
-  background: #00d4ff;
+  background: #ff8533;
   transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(0, 240, 255, 0.4);
+  box-shadow: 0 15px 40px rgba(255, 102, 0, 0.4);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--accent-cyan);
-  border: 2px solid var(--accent-cyan);
+  color: var(--accent-orange);
+  border: 2px solid var(--accent-orange);
 }
 
 .btn-secondary:hover {
-  background: rgba(0, 240, 255, 0.1);
+  background: rgba(255, 102, 0, 0.1);
   transform: translateY(-3px);
 }
 
@@ -339,7 +354,7 @@ nav.scrolled {
 .stat-number {
   font-size: 3rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-amber));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -419,7 +434,7 @@ nav.scrolled {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-amber));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -434,13 +449,20 @@ nav.scrolled {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 2px solid var(--accent-cyan);
+  border: 2px solid var(--accent-orange);
   animation: pulse-ring 2s ease-out infinite;
 }
 
 @keyframes pulse-ring {
-  0% { transform: scale(1); opacity: 0.5; }
-  100% { transform: scale(1.5); opacity: 0; }
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }
 
 .journey-label {
@@ -450,14 +472,23 @@ nav.scrolled {
 }
 
 .journey-arrow {
-  color: var(--accent-cyan);
+  color: var(--accent-orange);
   font-size: 1.5rem;
   animation: arrow-pulse 1.5s ease-in-out infinite;
 }
 
 @keyframes arrow-pulse {
-  0%, 100% { transform: translateX(0); opacity: 0.5; }
-  50% { transform: translateX(5px); opacity: 1; }
+
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translateX(5px);
+    opacity: 1;
+  }
 }
 
 /* ---------- Timeline Section ---------- */
@@ -473,7 +504,7 @@ nav.scrolled {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, var(--accent-cyan), var(--accent-purple), var(--accent-cyan));
+  background: linear-gradient(180deg, var(--accent-orange), var(--accent-amber), var(--accent-orange));
 }
 
 .timeline-item {
@@ -492,7 +523,7 @@ nav.scrolled {
   top: 0;
   width: 16px;
   height: 16px;
-  background: var(--accent-cyan);
+  background: var(--accent-orange);
   border-radius: 50%;
   transform: translateX(-50%);
   box-shadow: 0 0 20px var(--accent-cyan-glow);
@@ -505,8 +536,15 @@ nav.scrolled {
 }
 
 @keyframes pulse-dot {
-  0%, 100% { box-shadow: 0 0 20px var(--accent-cyan-glow); }
-  50% { box-shadow: 0 0 40px var(--accent-cyan-glow), 0 0 60px var(--accent-cyan-glow); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px var(--accent-cyan-glow);
+  }
+
+  50% {
+    box-shadow: 0 0 40px var(--accent-cyan-glow), 0 0 60px var(--accent-cyan-glow);
+  }
 }
 
 .timeline-content {
@@ -518,13 +556,13 @@ nav.scrolled {
 }
 
 .timeline-content:hover {
-  border-color: var(--accent-cyan);
-  box-shadow: 0 10px 40px rgba(0, 240, 255, 0.1);
+  border-color: var(--accent-orange);
+  box-shadow: 0 10px 40px rgba(255, 102, 0, 0.1);
 }
 
 .timeline-date {
   font-size: 0.85rem;
-  color: var(--accent-cyan);
+  color: var(--accent-orange);
   font-weight: 600;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
@@ -560,7 +598,7 @@ nav.scrolled {
   content: '→';
   position: absolute;
   left: 0;
-  color: var(--accent-cyan);
+  color: var(--accent-orange);
 }
 
 /* ---------- Skills Section ---------- */
@@ -579,7 +617,7 @@ nav.scrolled {
 }
 
 .skill-category:hover {
-  border-color: var(--accent-cyan);
+  border-color: var(--accent-orange);
   transform: translateY(-5px);
 }
 
@@ -588,7 +626,7 @@ nav.scrolled {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--accent-cyan);
+  color: var(--accent-orange);
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
@@ -600,7 +638,7 @@ nav.scrolled {
   display: block;
   width: 30px;
   height: 3px;
-  background: var(--accent-cyan);
+  background: var(--accent-orange);
   border-radius: 2px;
 }
 
@@ -611,8 +649,8 @@ nav.scrolled {
 }
 
 .skill-tag {
-  background: rgba(0, 240, 255, 0.1);
-  border: 1px solid rgba(0, 240, 255, 0.3);
+  background: rgba(255, 102, 0, 0.1);
+  border: 1px solid rgba(255, 102, 0, 0.3);
   border-radius: 8px;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
@@ -621,14 +659,14 @@ nav.scrolled {
 }
 
 .skill-tag:hover {
-  background: rgba(0, 240, 255, 0.2);
-  border-color: var(--accent-cyan);
+  background: rgba(255, 102, 0, 0.2);
+  border-color: var(--accent-orange);
   transform: translateY(-2px);
 }
 
 .skill-tag.highlight {
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(123, 44, 191, 0.2));
-  border-color: var(--accent-cyan);
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.2), rgba(123, 44, 191, 0.2));
+  border-color: var(--accent-orange);
 }
 
 /* ---------- Services Section ---------- */
@@ -655,15 +693,15 @@ nav.scrolled {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+  background: linear-gradient(90deg, var(--accent-orange), var(--accent-amber));
   transform: scaleX(0);
   transition: var(--transition-smooth);
 }
 
 .service-card:hover {
   transform: translateY(-10px);
-  border-color: var(--accent-cyan);
-  box-shadow: 0 25px 60px rgba(0, 240, 255, 0.15);
+  border-color: var(--accent-orange);
+  box-shadow: 0 25px 60px rgba(255, 102, 0, 0.15);
 }
 
 .service-card:hover::before {
@@ -673,7 +711,7 @@ nav.scrolled {
 .service-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(123, 44, 191, 0.2));
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.2), rgba(123, 44, 191, 0.2));
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -705,7 +743,7 @@ nav.scrolled {
 
 .cert-card {
   background: var(--card-bg);
-  border: 2px solid var(--accent-cyan);
+  border: 2px solid var(--accent-orange);
   border-radius: 20px;
   padding: 2rem;
   text-align: center;
@@ -721,18 +759,21 @@ nav.scrolled {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent 40%,
-    rgba(0, 240, 255, 0.1) 50%,
-    transparent 60%
-  );
+  background: linear-gradient(45deg,
+      transparent 40%,
+      rgba(255, 102, 0, 0.1) 50%,
+      transparent 60%);
   animation: cert-shine 3s ease-in-out infinite;
 }
 
 @keyframes cert-shine {
-  0% { transform: translateX(-100%) rotate(45deg); }
-  100% { transform: translateX(100%) rotate(45deg); }
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
 }
 
 .cert-card:hover {
@@ -743,7 +784,7 @@ nav.scrolled {
 .cert-badge {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-amber));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -793,14 +834,14 @@ nav.scrolled {
 }
 
 .contact-item:hover {
-  border-color: var(--accent-cyan);
+  border-color: var(--accent-orange);
   transform: translateX(5px);
 }
 
 .contact-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(123, 44, 191, 0.2));
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.2), rgba(123, 44, 191, 0.2));
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -810,14 +851,14 @@ nav.scrolled {
 }
 
 .contact-info a {
-  color: var(--accent-cyan);
+  color: var(--accent-orange);
   text-decoration: none;
   font-weight: 500;
   transition: var(--transition-smooth);
 }
 
 .contact-info a:hover {
-  color: #00d4ff;
+  color: #ff8533;
 }
 
 .contact-label {
@@ -857,54 +898,54 @@ footer p {
     gap: 1.5rem;
     border-bottom: 1px solid var(--glass-border);
   }
-  
+
   .nav-links.active {
     display: flex;
   }
-  
+
   .mobile-menu-btn {
     display: flex;
   }
-  
+
   .hero {
     padding: 5rem 1.5rem 3rem;
   }
-  
+
   .hero-cta {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .btn {
     width: 100%;
     max-width: 280px;
     justify-content: center;
   }
-  
+
   .section {
     padding: 4rem 1.5rem;
   }
-  
+
   .journey-visual {
     padding: 1.5rem;
   }
-  
+
   .journey-arrow {
     display: none;
   }
-  
+
   .timeline {
     padding-left: 1.5rem;
   }
-  
+
   .timeline-item {
     padding-left: 1.5rem;
   }
-  
+
   .timeline-dot {
     left: -1.5rem;
   }
-  
+
   .stats-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -914,11 +955,11 @@ footer p {
   .stat-number {
     font-size: 2.25rem;
   }
-  
+
   .skill-category {
     padding: 1.5rem;
   }
-  
+
   .service-card {
     padding: 1.5rem;
   }
