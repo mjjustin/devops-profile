@@ -1,0 +1,132 @@
+/* About & Contact page styles */
+
+/* ---------- About Page ---------- */
+.about-hero { padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-2xl); text-align: center; position: relative; z-index: 1; }
+.about-hero h1 { margin-bottom: var(--space-md); }
+.about-hero p { font-size: 1.15rem; max-width: 650px; margin: 0 auto; }
+
+.about-story { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: center; }
+.about-story-content h2 { margin-bottom: var(--space-lg); }
+.about-story-content p { margin-bottom: var(--space-md); }
+
+.about-values { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-xl); }
+.value-card { text-align: center; padding: var(--space-2xl) var(--space-xl); background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-xl); transition: var(--transition-slow); }
+.value-card:hover { border-color: var(--glass-border-hover); transform: translateY(-6px); }
+.value-icon { font-size: 2.5rem; margin-bottom: var(--space-lg); }
+.value-card h3 { margin-bottom: var(--space-sm); }
+
+.milestones { position: relative; max-width: 800px; margin: 0 auto; }
+.milestone-item { display: flex; gap: var(--space-xl); align-items: flex-start; padding: var(--space-lg) 0; border-bottom: 1px solid var(--glass-border); }
+.milestone-year { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--accent-orange); min-width: 80px; }
+.milestone-text h3 { margin-bottom: var(--space-xs); font-size: 1.1rem; }
+
+.founder-section { display: grid; grid-template-columns: auto 1fr; gap: var(--space-2xl); align-items: center; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-xl); padding: var(--space-2xl); }
+.founder-image { width: 120px; height: 120px; border-radius: var(--radius-circle); background: linear-gradient(135deg, var(--accent-orange), var(--accent-amber)); display: flex; align-items: center; justify-content: center; font-size: 3rem; font-weight: 800; color: #fff; }
+.founder-info h3 { font-size: 1.5rem; margin-bottom: var(--space-xs); }
+.founder-title { color: var(--accent-orange); font-weight: 600; margin-bottom: var(--space-md); }
+
+@media (max-width: 1024px) {
+  .about-story { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .about-story { grid-template-columns: 1fr; }
+  .about-values { grid-template-columns: 1fr; }
+  .founder-section { grid-template-columns: 1fr; text-align: center; }
+  .founder-image { margin: 0 auto; }
+  /* 3-col inline grids become single column on mobile */
+  [style*="grid-template-columns:repeat(3,1fr)"],
+  [style*="grid-template-columns: repeat(3,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ---------- Contact Page ---------- */
+.contact-hero { padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-2xl); text-align: center; position: relative; z-index: 1; }
+.contact-hero h1 { margin-bottom: var(--space-md); }
+.contact-hero p { font-size: 1.15rem; max-width: 600px; margin: 0 auto; }
+
+.contact-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-2xl); position: relative; z-index: 1; }
+
+.contact-form { background: rgba(15, 15, 24, 0.6); border: 1px solid var(--glass-border); border-radius: var(--radius-xl); padding: var(--space-2xl); }
+
+.form-group { margin-bottom: var(--space-lg); }
+.form-group label { display: block; font-size: 0.88rem; font-weight: 600; color: var(--text-secondary); margin-bottom: var(--space-sm); text-transform: uppercase; letter-spacing: 0.5px; }
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+}
+
+.form-group textarea { min-height: 140px; resize: vertical; }
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238b8fa3' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  cursor: pointer;
+}
+
+.form-group select option { background: var(--bg-secondary); }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); }
+
+.form-success {
+  display: none;
+  text-align: center;
+  padding: var(--space-2xl);
+}
+
+.form-success.show { display: block; }
+.form-success .success-icon { font-size: 3rem; margin-bottom: var(--space-md); }
+.form-success h3 { margin-bottom: var(--space-sm); }
+
+.contact-info-side { display: flex; flex-direction: column; gap: var(--space-lg); }
+
+.contact-info-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  transition: var(--transition-base);
+}
+
+.contact-info-card:hover { border-color: var(--glass-border-hover); }
+.contact-info-card h3 { font-size: 1rem; margin-bottom: var(--space-md); display: flex; align-items: center; gap: var(--space-sm); }
+
+.contact-detail { display: flex; align-items: center; gap: var(--space-md); padding: var(--space-sm) 0; }
+.contact-detail-icon { font-size: 1.2rem; }
+.contact-detail a { color: var(--accent-orange); font-weight: 500; }
+.contact-detail span { color: var(--text-secondary); }
+
+/* FAQ */
+.faq-item { border-bottom: 1px solid var(--glass-border); }
+.faq-question { width: 100%; padding: var(--space-lg) 0; display: flex; justify-content: space-between; align-items: center; color: var(--text-primary); font-weight: 600; font-size: 0.95rem; text-align: left; cursor: pointer; transition: var(--transition-fast); }
+.faq-question:hover { color: var(--accent-orange); }
+.faq-toggle { font-size: 1.2rem; color: var(--accent-orange); transition: var(--transition-fast); }
+.faq-item.open .faq-toggle { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease-smooth); }
+.faq-item.open .faq-answer { max-height: 200px; }
+.faq-answer p { padding-bottom: var(--space-lg); font-size: 0.92rem; }
+
+@media (max-width: 768px) {
+  .contact-layout { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+}

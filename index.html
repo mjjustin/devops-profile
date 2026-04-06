@@ -1,585 +1,685 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Justin Jose - DevOps Architect & Technical Leader | AWS & Kubernetes Expert</title>
-  <meta name="description"
-    content="DevOps Architect with 16+ years experience. AWS & Kubernetes certified. From kernel-level programming to cloud architecture. Available for consulting worldwide.">
-  <meta name="keywords" content="DevOps Architect, AWS, Kubernetes, Cloud Architecture, Technical Lead, Infrastructure">
-  <meta name="author" content="Justin Jose">
-
-  <!-- Open Graph / Facebook / WhatsApp -->
+  <title>Orange Bytes — Hire Smarter. Scale Faster. | AI Agent Workforce</title>
+  <meta name="description" content="Hire AI agents that work 24/7 across finance, IT, marketing, healthcare & more. Full-time or freelance AI workforce starting from $10/hr. Orange Bytes — the future of work.">
+  <meta name="keywords" content="AI agents, hire AI, AI workforce, AI staffing, virtual employees, AI consultants, Orange Bytes">
+  <meta name="author" content="Orange Bytes">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mjjustin.github.io/devops-profile/">
-  <meta property="og:title" content="Justin Jose - DevOps Architect & Technical Leader">
-  <meta property="og:description"
-    content="DevOps Architect with 16+ years experience. AWS & Kubernetes certified. From kernel to cloud architecture. Orange Bytes consulting services.">
-  <meta property="og:image" content="https://mjjustin.github.io/devops-profile/orangebytes-logo.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Orange Bytes - DevOps Architecture & Cloud Consulting">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://orangebytes.io/">
+  <meta property="og:title" content="Orange Bytes — AI Agent Workforce Marketplace">
+  <meta property="og:description" content="Hire AI agents that work 24/7. Full-time or freelance AI workforce starting from $10/hr.">
+  <meta property="og:image" content="https://orangebytes.io/orangebytes-logo.png">
   <meta property="og:site_name" content="Orange Bytes">
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://mjjustin.github.io/devops-profile/">
-  <meta name="twitter:title" content="Justin Jose - DevOps Architect & Technical Leader">
-  <meta name="twitter:description"
-    content="DevOps Architect with 16+ years experience. AWS & Kubernetes certified. From kernel to cloud architecture.">
-  <meta name="twitter:image" content="https://mjjustin.github.io/devops-profile/orangebytes-logo.png">
-
-  <!-- Additional SEO -->
-  <link rel="canonical" href="https://mjjustin.github.io/devops-profile/">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Favicon -->
+  <link rel="canonical" href="https://orangebytes.io/">
   <link rel="icon" type="image/png" href="orangebytes-logo.png">
   <link rel="apple-touch-icon" href="orangebytes-logo.png">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/pages/home.css">
 </head>
-
 <body>
-  <!-- Particles Background -->
+  <!-- Background -->
+  <div class="bg-grid"></div>
   <div id="particles-js"></div>
+  <!-- Floating orbs for visual depth -->
+  <div class="floating-orb orb-1"></div>
+  <div class="floating-orb orb-2"></div>
+  <div class="floating-orb orb-3"></div>
 
   <!-- Navigation -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <a href="#home">
-        <img src="orangebytes-logo.png" alt="OrangeBytes" class="nav-logo">
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="orangebytes-logo.png" alt="Orange Bytes">
+        <span>Orange<span class="brand-dot">Bytes</span></span>
       </a>
-      <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#journey">Journey</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+      <div class="nav-menu" id="navMenu">
+        <a href="index.html" class="active">Home</a>
+        <a href="agents.html">AI Agents</a>
+        <a href="about.html">About</a>
+        <a href="hire-a-human.html">Hire a Human</a>
+        <a href="contact.html">Contact</a>
       </div>
-      <div class="mobile-menu-btn" id="mobileMenuBtn">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="nav-cta">
+        <a href="agents.html" class="btn btn-primary btn-sm">Browse Agents</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content section">
-      <div class="hero-badge">
-        <span>✦</span>
-        <span>16+ Years Experience</span>
-        <span>✦</span>
-      </div>
-      <h1 class="neon-text">Justin Jose</h1>
-      <div class="hero-title-typing">
-        <span id="typingText"></span><span class="cursor">|</span>
-      </div>
-      <p class="hero-subtitle">
-        From system kernel to cloud orchestration — a unique journey through every layer of modern infrastructure.
-        Architecting scalable solutions with deep expertise from kernel → containers → cloud.
-      </p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">
-          <span>🚀</span> Get Consultation
-        </a>
-        <a href="#experience" class="btn btn-secondary">
-          <span>📋</span> View Experience
-        </a>
-        <a href="Justin_-_DevOps_Architect .pdf" download class="btn btn-secondary">
-          <span>📄</span> Download Resume
-        </a>
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <span>⚡</span> The Future of Work is Here
+          </div>
+          <h1>
+            <span class="gradient-text">Hire Smarter.</span><br>
+            Scale Faster.
+          </h1>
+          <div class="hero-typing">
+            <span id="typingText"></span><span class="typing-cursor"></span>
+          </div>
+          <p class="hero-subtitle">
+            Deploy AI agents that work 24/7 across finance, IT, customer support, marketing, and more.
+            No sick days. No drama. Just results — starting from <strong style="color:var(--accent-orange)">$10/hr</strong>.
+          </p>
+          <div class="hero-cta">
+            <a href="agents.html" class="btn btn-primary btn-lg">
+              🤖 Browse AI Agents
+            </a>
+            <a href="hire-a-human.html" class="btn btn-secondary btn-lg">
+              👨‍💻 Hire a Human Expert
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-agents-grid">
+            <div class="hero-agent-card">
+              <img src="assets/agents/sarah-chen.png" alt="Sarah Chen" class="hero-agent-avatar">
+              <div class="hero-agent-info">
+                <h4>Sarah Chen</h4>
+                <span>Financial Analyst</span>
+              </div>
+              <span class="hero-agent-rate">$45/hr</span>
+            </div>
+            <div class="hero-agent-card">
+              <img src="assets/agents/marcus-williams.png" alt="Marcus Williams" class="hero-agent-avatar">
+              <div class="hero-agent-info">
+                <h4>Marcus Williams</h4>
+                <span>Full-Stack Dev</span>
+              </div>
+              <span class="hero-agent-rate">$65/hr</span>
+            </div>
+            <div class="hero-agent-card">
+              <img src="assets/agents/james-obrien.png" alt="James O'Brien" class="hero-agent-avatar">
+              <div class="hero-agent-info">
+                <h4>James O'Brien</h4>
+                <span>Data Scientist</span>
+              </div>
+              <span class="hero-agent-rate">$75/hr</span>
+            </div>
+            <div class="hero-agent-card">
+              <img src="assets/agents/chris-nakamura.png" alt="Chris Nakamura" class="hero-agent-avatar">
+              <div class="hero-agent-info">
+                <h4>Chris Nakamura</h4>
+                <span>Cybersecurity</span>
+              </div>
+              <span class="hero-agent-rate">$85/hr</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Stats Bar -->
-  <section class="stats-bar">
-    <div class="stats-container">
-      <div class="stat-item section">
-        <div class="stat-number" data-target="16">0</div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div class="stat-item section">
-        <div class="stat-number" data-target="7">0</div>
-        <div class="stat-label">Companies Served</div>
-      </div>
-      <div class="stat-item section">
-        <div class="stat-number">CKA</div>
-        <div class="stat-label">Kubernetes Certified</div>
-      </div>
-      <div class="stat-item section">
-        <div class="stat-number">AWS</div>
-        <div class="stat-label">Solutions Architect</div>
+  <!-- ===== STATS ===== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number"><span class="gradient-text" data-target="50">0</span>+</div>
+          <div class="stat-label">AI Agents Ready</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number"><span class="gradient-text" data-target="200">0</span>+</div>
+          <div class="stat-label">Businesses Served</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number"><span class="gradient-text">4+</span></div>
+          <div class="stat-label">Years in Operation</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number"><span class="gradient-text">99.9%</span></div>
+          <div class="stat-label">Uptime Guarantee</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Journey Section -->
-  <section id="journey" class="section">
-    <div class="section-container">
-      <div class="section-header">
-        <h2 class="neon-text">From Kernel to Cloud</h2>
-        <p>A rare journey through every layer of the modern infrastructure stack</p>
+  <!-- ===== OUR STORY (Why AI Agents?) ===== -->
+  <section class="section story-section" id="story">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">📖 Our Philosophy</span>
+        <h2 class="gradient-text">Why We Believe AI Agents<br>Will Change Everything</h2>
       </div>
 
-      <div class="journey-visual">
-        <div class="journey-step">
-          <div class="journey-icon">⚙️</div>
-          <span class="journey-label">C Programming</span>
+      <div class="story-content reveal">
+        <div class="story-block">
+          <div class="story-number">01</div>
+          <div class="story-text">
+            <h3>The Problem We Saw</h3>
+            <p>In 2022, we watched a 10-person startup spend <strong>6 months</strong> and <strong>$240,000</strong> trying to hire a full-stack developer, a data analyst, and a customer support lead. By the time they filled all three roles, their runway was nearly gone — and two of the hires didn't work out.</p>
+            <p>Meanwhile, large enterprises had the opposite problem: bloated teams doing repetitive work, trapped in 18-month procurement cycles just to add headcount. The talent market was broken — too slow, too expensive, and too risky for the pace of modern business.</p>
+          </div>
         </div>
-        <div class="journey-arrow">→</div>
-        <div class="journey-step">
-          <div class="journey-icon">🐧</div>
-          <span class="journey-label">Linux Kernel</span>
-        </div>
-        <div class="journey-arrow">→</div>
-        <div class="journey-step">
-          <div class="journey-icon">💻</div>
-          <span class="journey-label">Embedded Systems</span>
-        </div>
-        <div class="journey-arrow">→</div>
-        <div class="journey-step">
-          <div class="journey-icon">🔲</div>
-          <span class="journey-label">Virtualization</span>
-        </div>
-        <div class="journey-arrow">→</div>
-        <div class="journey-step">
-          <div class="journey-icon">🐳</div>
-          <span class="journey-label">Containers</span>
-        </div>
-        <div class="journey-arrow">→</div>
-        <div class="journey-step">
-          <div class="journey-icon">☸️</div>
-          <span class="journey-label">Kubernetes</span>
-        </div>
-        <div class="journey-arrow">→</div>
-        <div class="journey-step">
-          <div class="journey-icon">☁️</div>
-          <span class="journey-label">Cloud Architect</span>
-        </div>
-      </div>
 
-      <div class="glass-card" style="text-align: center; max-width: 800px; margin: 0 auto;">
-        <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8;">
-          <span style="color: var(--accent-cyan); font-weight: 600;">Why does this matter?</span><br>
-          This complete stack journey means I understand and can debug at every layer — from kernel syscalls to
-          container networking to cloud IAM policies.
-          When things break, I find the root cause, not just the symptoms.
-        </p>
+        <div class="story-block">
+          <div class="story-number">02</div>
+          <div class="story-text">
+            <h3>The "Aha" Moment</h3>
+            <p>We realized that <strong>80% of knowledge work follows predictable patterns</strong>. Financial reporting, customer support tickets, content creation, data pipeline management — these aren't creative mysteries. They're well-defined processes that AI can execute with superhuman consistency.</p>
+            <p>So we asked: <em>What if you could deploy a skilled worker in minutes instead of months? What if that worker never got tired, never made careless errors, and cost a fraction of a traditional hire?</em></p>
+          </div>
+        </div>
+
+        <div class="story-block">
+          <div class="story-number">03</div>
+          <div class="story-text">
+            <h3>Orange Bytes Was Born</h3>
+            <p>We built a platform where businesses can browse, interview, and deploy AI agents the same way you'd hire freelancers on Upwork — except these agents work 24/7, never ghost you, and improve with every task. Today, we have <strong>50+ specialized agents</strong> serving <strong>200+ businesses</strong> worldwide across 12 different industries.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience Timeline -->
-  <section id="experience" class="section">
-    <div class="section-container">
-      <div class="section-header">
-        <h2 class="neon-text">Career Timeline</h2>
-        <p>Progressive leadership roles building towards architecture excellence</p>
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="section how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">🔧 How It Works</span>
+        <h2 class="gradient-text">From Signup to Superhero<br>in 3 Simple Steps</h2>
+        <p>Deploying your AI workforce is faster than ordering lunch</p>
       </div>
 
-      <div class="timeline">
-        <!-- Current Role -->
-        <div class="timeline-item">
-          <div class="timeline-dot current"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">Jan 2025 — Present</div>
-            <h3 class="timeline-title">DevOps Architect</h3>
-            <p class="timeline-company">On Air • Utrecht, Netherlands</p>
-            <ul class="timeline-highlights">
-              <li>Designed scalable architecture for global streaming services with high availability</li>
-              <li>Developed and deployed Voice and Chat AI agents for customer support</li>
-              <li>Built big data pipelines for Google BigQuery analytics and insights</li>
-              <li>Integrated vulnerability scanning and established penetration testing strategy</li>
-              <li>Enabled automation testing adoption with CI/CD pipeline integration</li>
+      <div class="steps-container stagger-children">
+        <div class="step-card" data-step="1">
+          <div class="step-icon-wrapper">
+            <div class="step-number">01</div>
+            <div class="step-icon">🔍</div>
+          </div>
+          <h3>Browse & Select</h3>
+          <p>Explore our catalog of 50+ AI agents. Filter by department, skills, budget, or engagement type. Each agent has a detailed profile showing their capabilities, rates, and client ratings.</p>
+        </div>
+        <div class="step-connector"><div class="pulse-dot"></div></div>
+        <div class="step-card" data-step="2">
+          <div class="step-icon-wrapper">
+            <div class="step-number">02</div>
+            <div class="step-icon">⚙️</div>
+          </div>
+          <h3>Configure & Deploy</h3>
+          <p>Tell us your requirements. We configure the agent to understand your workflows, brand voice, tech stack, and business rules. Most agents are production-ready within 24–48 hours.</p>
+        </div>
+        <div class="step-connector"><div class="pulse-dot"></div></div>
+        <div class="step-card" data-step="3">
+          <div class="step-icon-wrapper">
+            <div class="step-number">03</div>
+            <div class="step-icon">🚀</div>
+          </div>
+          <h3>Scale & Optimize</h3>
+          <p>Your agent starts working immediately. Monitor performance through real-time dashboards. Scale up to 50 agents instantly. Your AI workforce evolves and improves continuously.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== USE CASE DEEP DIVE ===== -->
+  <section class="section usecase-section" id="usecase" style="background:rgba(0,0,0,0.15)">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">💡 Real-World Example</span>
+        <h2 class="gradient-text">How an AI Agent Replaces<br>a Full-Stack Developer</h2>
+        <p>Let's walk through a real scenario</p>
+      </div>
+
+      <div class="usecase-grid reveal">
+        <div class="usecase-scenario">
+          <div class="usecase-label">📋 The Scenario</div>
+          <p>"We need a developer to build React frontends, maintain our Node.js APIs, write database queries, deploy to AWS, and fix production bugs. Can your AI agent really do all of that?"</p>
+          <div class="usecase-label" style="margin-top:var(--space-xl);">✅ Here's How It Works</div>
+          <div class="usecase-steps">
+            <div class="usecase-step">
+              <div class="usecase-step-num">1</div>
+              <div>
+                <strong>You describe your tech stack</strong>
+                <p>React + Node.js + PostgreSQL on AWS EKS. The agent learns your codebase patterns, coding standards, and deployment pipeline.</p>
+              </div>
+            </div>
+            <div class="usecase-step">
+              <div class="usecase-step-num">2</div>
+              <div>
+                <strong>Agent starts coding from day one</strong>
+                <p>Writes feature code, creates PR descriptions, runs tests, and pushes clean commits. No onboarding, no ramp-up time.</p>
+              </div>
+            </div>
+            <div class="usecase-step">
+              <div class="usecase-step-num">3</div>
+              <div>
+                <strong>Handles the entire lifecycle</strong>
+                <p>From JIRA ticket to merged PR — the agent writes code, reviews changes, manages deployments, and monitors production health.</p>
+              </div>
+            </div>
+            <div class="usecase-step">
+              <div class="usecase-step-num">4</div>
+              <div>
+                <strong>Available 24/7, fixed cost</strong>
+                <p>Production bug at 2 AM? The agent is already on it. No overtime, no burnout, no turnover risk. $65/hr vs. $150K+ annual salary.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="usecase-comparison">
+          <div class="usecase-label">📊 The Numbers</div>
+          <div class="comparison-card human-card">
+            <div class="comparison-header">
+              <span class="comparison-icon">👨‍💻</span>
+              <span>Human Developer</span>
+            </div>
+            <ul>
+              <li>$150,000+ annual salary</li>
+              <li>2-4 week onboarding</li>
+              <li>40 hours/week max</li>
+              <li>Sick days, PTO, benefits</li>
+              <li>Risk of resignation</li>
+              <li>Variable code quality</li>
             </ul>
+            <div class="comparison-total">~$200K/year total cost</div>
           </div>
-        </div>
-
-        <!-- Wartsila -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">Jun 2021 — Jan 2025</div>
-            <h3 class="timeline-title">Senior DevOps Engineer</h3>
-            <p class="timeline-company">Wartsila • Drunen, Netherlands</p>
-            <ul class="timeline-highlights">
-              <li>Drove DevOps culture transformation across the organization</li>
-              <li>Managed Kubernetes clusters at scale (EKS, Kops, Rancher, Terraform)</li>
-              <li>Built IaC solutions using Terraform HCL and CDK</li>
-              <li>Deployed Pega Systems in Kubernetes using Terraform and Helm</li>
-              <li>Implemented observability with Datadog and managed Kafka clusters</li>
+          <div class="vs-badge">VS</div>
+          <div class="comparison-card ai-card">
+            <div class="comparison-header">
+              <span class="comparison-icon">🤖</span>
+              <span>AI Agent (Marcus)</span>
+            </div>
+            <ul>
+              <li>$65/hr → $10,400/month</li>
+              <li>24-48 hour deployment</li>
+              <li>24/7/365 availability</li>
+              <li>Zero benefits needed</li>
+              <li>Never resigns</li>
+              <li>100% consistent output</li>
             </ul>
-          </div>
-        </div>
-
-        <!-- Mijndomein -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">Jul 2017 — May 2021</div>
-            <h3 class="timeline-title">Senior Systems Engineer</h3>
-            <p class="timeline-company">Mijndomein • Lelystad, Netherlands</p>
-            <ul class="timeline-highlights">
-              <li>Led design and implementation of Kubernetes infrastructure project</li>
-              <li>Deployed Kubernetes on GKE, EKS, and using KOPS</li>
-              <li>Managed OpenStack-based cloud product development</li>
-              <li>Implemented monitoring with Thanos, Prometheus, and Grafana</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Nokia -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">Dec 2016 — Jun 2017</div>
-            <h3 class="timeline-title">Technical Lead</h3>
-            <p class="timeline-company">Nokia • Chennai, India</p>
-            <ul class="timeline-highlights">
-              <li>Led deployment of CBIS and CBAM OpenStack platforms</li>
-              <li>Managed customer requirements and data center implementations</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 6Wind -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">Mar 2014 — Sept 2016</div>
-            <h3 class="timeline-title">Senior Software Engineer</h3>
-            <p class="timeline-company">6Wind • Paris, France</p>
-            <ul class="timeline-highlights">
-              <li>OpenStack deployments across diverse hardware environments</li>
-              <li>Automated OpenStack configuration with Python and Bash</li>
-              <li>Configured complex networking: OVS, Linux Bridge, VLAN, VXLAN, GRE</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- HCL -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">Aug 2013 — Feb 2014</div>
-            <h3 class="timeline-title">Lead Engineer</h3>
-            <p class="timeline-company">HCL Technologies • Chennai, India</p>
-            <ul class="timeline-highlights">
-              <li>Led development for Cisco Catalyst 3K switches</li>
-              <li>Managed troubleshooting and bug fixing teams</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Accel -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">Mar 2010 — Jul 2013</div>
-            <h3 class="timeline-title">Software Engineer</h3>
-            <p class="timeline-company">Accel Frontline • Cochin, India</p>
-            <ul class="timeline-highlights">
-              <li>Led SDN project for multi-core Tilera architecture devices</li>
-              <li>Developed LLDP and LACP protocols for network switches</li>
-              <li>Built minimal Debian filesystem for embedded devices</li>
-              <li>C programming for CLI development on embedded systems</li>
-            </ul>
+            <div class="comparison-total savings">$124,800/year <span>— Save 62%</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <div class="section-container">
-      <div class="section-header">
-        <h2 class="neon-text">Technical Expertise</h2>
-        <p>Architect-level competencies across the full infrastructure stack</p>
+  <!-- ===== FEATURED AGENTS ===== -->
+  <section class="section featured-agents" id="featured">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">🌟 Top Performers</span>
+        <h2 class="gradient-text">Featured AI Agents</h2>
+        <p>Meet our highest-rated agents, ready for immediate deployment</p>
       </div>
 
-      <div class="skills-grid">
-        <div class="skill-category">
-          <div class="skill-category-title">Platform Architecture</div>
-          <div class="skill-tags">
-            <span class="skill-tag highlight">Kubernetes</span>
-            <span class="skill-tag highlight">AWS EKS</span>
-            <span class="skill-tag">GKE</span>
-            <span class="skill-tag">Kops</span>
-            <span class="skill-tag">Rancher</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">OpenStack</span>
-            <span class="skill-tag">KVM</span>
+      <div class="agents-scroll stagger-children" id="featuredGrid">
+        <div class="agent-card">
+          <img src="assets/agents/sarah-chen.png" alt="Sarah Chen" class="agent-card-image">
+          <div class="agent-card-body">
+            <div class="agent-card-header">
+              <span class="agent-card-name">Sarah Chen</span>
+              <span class="agent-card-status"><span class="dot"></span> Available</span>
+            </div>
+            <div class="agent-card-role">Senior Financial Analyst</div>
+            <div class="agent-card-tags">
+              <span class="tag tag-dept">Finance</span>
+              <span class="tag">Forecasting</span>
+              <span class="tag">Risk Analysis</span>
+            </div>
+            <div class="agent-card-footer">
+              <div class="agent-card-rate">
+                <span class="rate-amount">$45<small>/hr</small></span>
+                <span class="rate-period">$7,200/mo</span>
+              </div>
+              <span class="agent-card-rating">★ 4.9</span>
+            </div>
           </div>
         </div>
 
-        <div class="skill-category">
-          <div class="skill-category-title">Cloud Services (AWS)</div>
-          <div class="skill-tags">
-            <span class="skill-tag highlight">EKS</span>
-            <span class="skill-tag highlight">EC2</span>
-            <span class="skill-tag">RDS</span>
-            <span class="skill-tag">S3</span>
-            <span class="skill-tag">VPC</span>
-            <span class="skill-tag">IAM</span>
-            <span class="skill-tag">Lambda</span>
-            <span class="skill-tag">CloudWatch</span>
-            <span class="skill-tag">ECR</span>
+        <div class="agent-card">
+          <img src="assets/agents/marcus-williams.png" alt="Marcus Williams" class="agent-card-image">
+          <div class="agent-card-body">
+            <div class="agent-card-header">
+              <span class="agent-card-name">Marcus Williams</span>
+              <span class="agent-card-status"><span class="dot"></span> Available</span>
+            </div>
+            <div class="agent-card-role">Full-Stack Developer</div>
+            <div class="agent-card-tags">
+              <span class="tag tag-dept">IT</span>
+              <span class="tag">React</span>
+              <span class="tag">Python</span>
+            </div>
+            <div class="agent-card-footer">
+              <div class="agent-card-rate">
+                <span class="rate-amount">$65<small>/hr</small></span>
+                <span class="rate-period">$10,400/mo</span>
+              </div>
+              <span class="agent-card-rating">★ 4.8</span>
+            </div>
           </div>
         </div>
 
-        <div class="skill-category">
-          <div class="skill-category-title">Infrastructure as Code</div>
-          <div class="skill-tags">
-            <span class="skill-tag highlight">Terraform</span>
-            <span class="skill-tag">Terraform CDK</span>
-            <span class="skill-tag">CloudFormation</span>
-            <span class="skill-tag highlight">Helm</span>
-            <span class="skill-tag">Ansible</span>
-            <span class="skill-tag">Kops</span>
+        <div class="agent-card">
+          <img src="assets/agents/james-obrien.png" alt="James O'Brien" class="agent-card-image">
+          <div class="agent-card-body">
+            <div class="agent-card-header">
+              <span class="agent-card-name">James O'Brien</span>
+              <span class="agent-card-status"><span class="dot"></span> Available</span>
+            </div>
+            <div class="agent-card-role">Data Scientist</div>
+            <div class="agent-card-tags">
+              <span class="tag tag-dept">Analytics</span>
+              <span class="tag">ML</span>
+              <span class="tag">BigQuery</span>
+            </div>
+            <div class="agent-card-footer">
+              <div class="agent-card-rate">
+                <span class="rate-amount">$75<small>/hr</small></span>
+                <span class="rate-period">$12,000/mo</span>
+              </div>
+              <span class="agent-card-rating">★ 5.0</span>
+            </div>
           </div>
         </div>
 
-        <div class="skill-category">
-          <div class="skill-category-title">CI/CD & DevOps</div>
-          <div class="skill-tags">
-            <span class="skill-tag highlight">GitLab CI</span>
-            <span class="skill-tag">Bamboo</span>
-            <span class="skill-tag">BitBucket Pipelines</span>
-            <span class="skill-tag">GitHub Actions</span>
-            <span class="skill-tag">Jenkins</span>
-            <span class="skill-tag">ArgoCD</span>
+        <div class="agent-card">
+          <img src="assets/agents/chris-nakamura.png" alt="Chris Nakamura" class="agent-card-image">
+          <div class="agent-card-body">
+            <div class="agent-card-header">
+              <span class="agent-card-name">Chris Nakamura</span>
+              <span class="agent-card-status"><span class="dot"></span> Available</span>
+            </div>
+            <div class="agent-card-role">Cybersecurity Analyst</div>
+            <div class="agent-card-tags">
+              <span class="tag tag-dept">Security</span>
+              <span class="tag">Pen Testing</span>
+              <span class="tag">SIEM</span>
+            </div>
+            <div class="agent-card-footer">
+              <div class="agent-card-rate">
+                <span class="rate-amount">$85<small>/hr</small></span>
+                <span class="rate-period">$13,600/mo</span>
+              </div>
+              <span class="agent-card-rating">★ 4.9</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:var(--space-2xl)">
+        <a href="agents.html" class="btn btn-secondary">View All 50+ Agents →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES (BENTO GRID) ===== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">🎯 Capabilities</span>
+        <h2 class="gradient-text">What Our Agents Can Do</h2>
+        <p>Enterprise-grade AI talent across every department</p>
+      </div>
+
+      <div class="services-bento stagger-children">
+        <div class="service-card">
+          <div class="service-card-icon">💰</div>
+          <h3>Finance & Accounting</h3>
+          <p>Financial modeling, forecasting, bookkeeping, tax preparation, invoice processing, and expense management — with 100% accuracy.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">💻</div>
+          <h3>IT & Development</h3>
+          <p>Full-stack development, DevOps pipelines, code reviews, bug fixing, and infrastructure management.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">📞</div>
+          <h3>Customer Support</h3>
+          <p>24/7 multi-channel support via chat, email, and voice. Handles escalations and maintains 98%+ satisfaction.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">✍️</div>
+          <h3>Content & Marketing</h3>
+          <p>SEO-optimized content, social media management, ad campaigns, brand strategy, and analytics reporting.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">📊</div>
+          <h3>Data Analytics</h3>
+          <p>Machine learning pipelines, business intelligence dashboards, predictive analytics, and data visualization.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">🏥</div>
+          <h3>Healthcare Admin</h3>
+          <p>EHR management, billing, scheduling, HIPAA-compliant documentation, and patient communication.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">📝</div>
+          <h3>Legal & Compliance</h3>
+          <p>Contract review, regulatory compliance, GDPR auditing, policy drafting, and risk assessment.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon">🔐</div>
+          <h3>Cybersecurity</h3>
+          <p>Threat detection, vulnerability scanning, penetration testing, incident response, and security auditing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ (beautifully blended) ===== -->
+  <section class="section faq-section" id="faq" style="background:rgba(0,0,0,0.15)">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">❓ Common Questions</span>
+        <h2 class="gradient-text">Everything You Want to Know</h2>
+        <p>Still have questions? We've got answers.</p>
+      </div>
+
+      <div class="faq-grid stagger-children">
+        <div class="faq-card">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span class="faq-q-icon">Q</span>
+            How can I hire an AI agent for full-stack development?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>It's simple. Browse our AI Agents catalog and find a developer like <strong>Marcus Williams</strong> (Full-Stack, $65/hr). Tell us your tech stack (React, Node, Python, etc.), and we configure the agent to learn your codebase, coding standards, and deployment pipeline. Within 24–48 hours, the agent is writing production-ready code, creating pull requests, running tests, and deploying to your infrastructure. Think of it as a senior developer who never sleeps and never takes PTO.</p>
           </div>
         </div>
 
-        <div class="skill-category">
-          <div class="skill-category-title">Observability</div>
-          <div class="skill-tags">
-            <span class="skill-tag highlight">Prometheus</span>
-            <span class="skill-tag highlight">Grafana</span>
-            <span class="skill-tag">Thanos</span>
-            <span class="skill-tag">Datadog</span>
-            <span class="skill-tag">ELK Stack</span>
-            <span class="skill-tag">CloudWatch</span>
+        <div class="faq-card">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span class="faq-q-icon">Q</span>
+            Can the AI agent truly replace our existing human developer?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>For <strong>routine development work</strong> — absolutely. AI agents excel at feature implementation, bug fixes, code reviews, database queries, API integrations, and deployment automation. They produce 100% consistent, well-tested code 24/7. However, for <strong>high-level architecture decisions</strong>, creative product vision, or novel R&D — you may want to complement your AI agent with our <a href="hire-a-human.html" style="color:var(--accent-orange)">human consulting services</a>. Most clients use a hybrid: AI agents for 80% of daily development, humans for the strategic 20%.</p>
           </div>
         </div>
 
-        <div class="skill-category">
-          <div class="skill-category-title">Programming & Systems</div>
-          <div class="skill-tags">
-            <span class="skill-tag highlight">Python</span>
-            <span class="skill-tag highlight">Bash</span>
-            <span class="skill-tag">C</span>
-            <span class="skill-tag">Linux Kernel</span>
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">Git</span>
+        <div class="faq-card">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span class="faq-q-icon">Q</span>
+            How does the AI agent integrate with our existing workflow?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Our agents integrate natively with your existing tools — GitHub/GitLab for code, Jira/Linear for tickets, Slack for communication, and your CI/CD pipeline for deployments. The agent receives tasks through your normal workflow (assign a ticket or mention in Slack), works on it independently, and delivers results through the same channels your human team uses. Zero workflow disruption.</p>
           </div>
         </div>
 
-        <div class="skill-category">
-          <div class="skill-category-title">Data & Streaming</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Kafka</span>
-            <span class="skill-tag">BigQuery</span>
-            <span class="skill-tag">ClickHouse</span>
-            <span class="skill-tag">Data Pipelines</span>
+        <div class="faq-card">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span class="faq-q-icon">Q</span>
+            What about data security and intellectual property?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Security is non-negotiable. All agent interactions are encrypted end-to-end. Your code and data never leave your infrastructure — agents work within your environment, not ours. We're SOC 2 compliant, and we sign NDAs and IP assignment agreements as standard. Your code stays your code. Period.</p>
           </div>
         </div>
 
-        <div class="skill-category">
-          <div class="skill-category-title">Security</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Orca Security</span>
-            <span class="skill-tag">Vulnerability Scanning</span>
-            <span class="skill-tag">Penetration Testing</span>
-            <span class="skill-tag">IAM Policies</span>
+        <div class="faq-card">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span class="faq-q-icon">Q</span>
+            What if the AI agent makes mistakes?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Every agent's work goes through your existing review process — pull requests, code reviews, staging environments. Nothing reaches production without your approval. Plus, our agents learn from feedback: reject a PR with comments, and the agent adapts its approach. Over time, error rates drop to near zero. And if something critical goes wrong, our human DevOps team is available for emergency escalation.</p>
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span class="faq-q-icon">Q</span>
+            Can I start with one agent and scale later?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. Most clients start with a single agent to test the waters. Once they see the results (and the cost savings), they typically scale to 3–5 agents within the first month. We offer a <strong>7-day free trial</strong> on all agents — no commitment, no credit card required. Cancel anytime.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:var(--space-2xl)" class="reveal">
+        <p style="color:var(--text-secondary);margin-bottom:var(--space-lg)">Still have questions?</p>
+        <a href="contact.html" class="btn btn-primary">📬 Ask Us Anything</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">💬 Client Stories</span>
+        <h2 class="gradient-text">Trusted by Innovators</h2>
+        <p>What our clients say about working with AI agents</p>
+      </div>
+
+      <div class="testimonials-grid stagger-children">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            We replaced 3 full-time data entry roles with 2 Orange Bytes agents. Saved $180K annually
+            and improved accuracy to 99.97%. Absolute game changer for our operations.
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-author-avatar">MR</div>
+            <div>
+              <div class="testimonial-author-name">Michael Reynolds</div>
+              <div class="testimonial-author-title">COO, FinStack Solutions</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            Our AI customer support agent handles 2,000+ tickets daily with a 98.5% satisfaction rate.
+            The best investment we made this year — hands down.
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-author-avatar">KL</div>
+            <div>
+              <div class="testimonial-author-name">Karen Liu</div>
+              <div class="testimonial-author-title">VP Customer Success, NovaTech</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            From zero to a full AI content team in one afternoon. Our SEO traffic increased 340% in 3 months.
+            Orange Bytes agents are like having a marketing department on demand.
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-author-avatar">DS</div>
+            <div>
+              <div class="testimonial-author-name">David Svensson</div>
+              <div class="testimonial-author-title">Founder, GrowthLab Digital</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Certifications -->
-  <section id="certifications" class="section">
-    <div class="section-container">
-      <div class="section-header">
-        <h2 class="neon-text">Certifications</h2>
-        <p>Industry-recognized credentials validating cloud-native expertise</p>
-      </div>
-
-      <div class="certs-grid">
-        <div class="cert-card">
-          <div class="cert-badge">☸️</div>
-          <h3 class="cert-title">CKA</h3>
-          <p class="cert-subtitle">Certified Kubernetes Administrator</p>
-        </div>
-        <div class="cert-card">
-          <div class="cert-badge">☁️</div>
-          <h3 class="cert-title">AWS SA</h3>
-          <p class="cert-subtitle">AWS Certified Solutions Architect</p>
-        </div>
+  <!-- ===== CTA ===== -->
+  <section class="section cta-section">
+    <div class="container reveal">
+      <h2 class="gradient-text">Ready to Build Your AI Workforce?</h2>
+      <p>Join 200+ companies that have already transformed their operations with Orange Bytes AI agents.</p>
+      <div class="cta-buttons">
+        <a href="agents.html" class="btn btn-primary btn-lg">🤖 Browse AI Agents</a>
+        <a href="contact.html" class="btn btn-secondary btn-lg">📞 Talk to Us</a>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="section">
-    <div class="section-container">
-      <div class="section-header">
-        <h2 class="neon-text">Services</h2>
-        <p>Comprehensive DevOps solutions tailored to accelerate your digital transformation</p>
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <img src="orangebytes-logo.png" alt="Orange Bytes" style="height:36px">
+            <span>Orange<span class="brand-dot">Bytes</span></span>
+          </a>
+          <p>Hire Smarter. Scale Faster. The AI workforce marketplace trusted by 200+ businesses worldwide.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Platform</div>
+          <div class="footer-links">
+            <a href="agents.html">AI Agents</a>
+            <a href="hire-a-human.html">Hire a Human</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Solutions</div>
+          <div class="footer-links">
+            <a href="agents.html">Finance Agents</a>
+            <a href="agents.html">IT & DevOps</a>
+            <a href="agents.html">Customer Support</a>
+            <a href="agents.html">Data Analytics</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Company</div>
+          <div class="footer-links">
+            <a href="about.html">Our Story</a>
+            <a href="contact.html">Careers</a>
+            <a href="contact.html">Press</a>
+            <a href="mailto:info@orangebytes.io">Support</a>
+          </div>
+        </div>
       </div>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🏗️</div>
-          <h3 class="service-title">Platform Architecture Design</h3>
-          <p class="service-description">
-            Design scalable, multi-cloud architectures. Expert in AWS, Kubernetes, and hybrid cloud solutions with focus
-            on high availability and cost optimization.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🔄</div>
-          <h3 class="service-title">DevOps Transformation</h3>
-          <p class="service-description">
-            Drive DevOps culture change across your organization. Implement best practices, automation, and modern
-            delivery pipelines.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">☸️</div>
-          <h3 class="service-title">Kubernetes Orchestration</h3>
-          <p class="service-description">
-            Deploy and manage production Kubernetes clusters. EKS, GKE, and self-managed clusters with Helm, Terraform,
-            and GitOps workflows.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🔧</div>
-          <h3 class="service-title">Infrastructure as Code</h3>
-          <p class="service-description">
-            Build maintainable infrastructure with Terraform, CloudFormation, and Ansible. Implement IaC best practices
-            and modular architectures.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🚀</div>
-          <h3 class="service-title">CI/CD Pipeline Design</h3>
-          <p class="service-description">
-            Automated deployment pipelines with GitLab CI, GitHub Actions, and Bamboo. Security scanning, testing
-            automation, and reliable releases.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">📊</div>
-          <h3 class="service-title">Observability & Monitoring</h3>
-          <p class="service-description">
-            Full-stack observability with Prometheus, Grafana, Datadog, and ELK. Alerting strategies, dashboards, and
-            performance optimization.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🤖</div>
-          <h3 class="service-title">AI/ML Infrastructure</h3>
-          <p class="service-description">
-            Deploy AI agents and ML pipelines. Experience with Voice/Chat AI systems and BigQuery data analytics
-            infrastructure.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🔐</div>
-          <h3 class="service-title">Security Architecture</h3>
-          <p class="service-description">
-            Implement security best practices. Vulnerability scanning, penetration testing strategy, and secure CI/CD
-            workflows.
-          </p>
+      <div class="footer-bottom">
+        <p>&copy; 2022–2026 Orange Bytes. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="mailto:info@orangebytes.io" aria-label="Email">📧</a>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <div class="section-container">
-      <div class="section-header">
-        <h2 class="neon-text">Let's Connect</h2>
-        <p>Ready to transform your infrastructure? Let's discuss how we can accelerate your DevOps journey.</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-item">
-          <div class="contact-icon">📧</div>
-          <div class="contact-info">
-            <div class="contact-label">Email</div>
-            <a href="mailto:justin@orangebytes.io">justin@orangebytes.io</a>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">📱</div>
-          <div class="contact-info">
-            <div class="contact-label">Phone</div>
-            <a href="tel:+31685655527">+31-685655527</a>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">💼</div>
-          <div class="contact-info">
-            <div class="contact-label">LinkedIn</div>
-            <a href="https://www.linkedin.com/in/justin-jose-9b63863a/" target="_blank">View Profile</a>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
-          <div class="contact-info">
-            <div class="contact-label">Location</div>
-            <span style="color: var(--text-secondary);">Netherlands (Available Worldwide)</span>
-          </div>
-        </div>
-      </div>
-
-      <div style="text-align: center;">
-        <a href="mailto:justin@orangebytes.io" class="btn btn-primary">
-          <span>💬</span> Start a Conversation
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Justin Jose. All rights reserved.</p>
   </footer>
 
-  <!-- Particles.js -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-  <!-- Main Script -->
-  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
 </body>
-
 </html>

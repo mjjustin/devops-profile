@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Agents Catalog — Orange Bytes | Hire AI Workforce</title>
+  <meta name="description" content="Browse 50+ AI agents ready for deployment. Finance, IT, marketing, support, healthcare and more. Hire full-time or freelance AI agents starting from $10/hr.">
+  <link rel="icon" type="image/png" href="orangebytes-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/pages/agents.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div id="particles-js"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="orangebytes-logo.png" alt="Orange Bytes">
+        <span>Orange<span class="brand-dot">Bytes</span></span>
+      </a>
+      <div class="nav-menu" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="agents.html" class="active">AI Agents</a>
+        <a href="about.html">About</a>
+        <a href="hire-a-human.html">Hire a Human</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+      <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="agents-hero">
+    <div class="container">
+      <span class="section-label reveal">🤖 AI Workforce</span>
+      <h1 class="gradient-text reveal">Our AI Agent Catalog</h1>
+      <p class="reveal">Browse our roster of 50+ AI agents. Filter by department, skills, or budget to find the perfect fit for your team.</p>
+    </div>
+  </section>
+
+  <!-- Filter + Grid -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <!-- Filter Bar -->
+      <div class="filter-bar reveal" id="filterBar">
+        <div class="search-wrapper">
+          <input type="text" class="search-input" id="searchInput" placeholder="Search by name, role, or skill...">
+        </div>
+        <select class="filter-select" id="deptFilter">
+          <option value="">All Departments</option>
+          <option value="finance">Finance</option>
+          <option value="it">IT & Engineering</option>
+          <option value="support">Customer Support</option>
+          <option value="analytics">Data Analytics</option>
+          <option value="marketing">Marketing</option>
+          <option value="legal">Legal</option>
+          <option value="creative">Design & Creative</option>
+          <option value="healthcare">Healthcare</option>
+          <option value="sales">Sales</option>
+          <option value="hr">HR</option>
+          <option value="security">Cybersecurity</option>
+        </select>
+        <select class="filter-select" id="typeFilter">
+          <option value="">All Types</option>
+          <option value="fulltime">Full-Time</option>
+          <option value="freelance">Freelance</option>
+          <option value="project">Project-Based</option>
+        </select>
+      </div>
+
+      <div class="results-count" id="resultsCount">
+        Showing <span>12</span> agents
+      </div>
+
+      <!-- Agents Grid -->
+      <div class="agents-grid" id="agentsGrid">
+        <!-- Agents rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container reveal">
+      <h2 class="gradient-text">Can't Find What You Need?</h2>
+      <p>We build custom AI agents tailored to your exact requirements. Tell us what you need and we'll make it happen.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary btn-lg">🛠️ Request Custom Agent</a>
+        <a href="hire-a-human.html" class="btn btn-secondary btn-lg">👨‍💻 Hire a Human Instead</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <img src="orangebytes-logo.png" alt="Orange Bytes" style="height:36px">
+            <span>Orange<span class="brand-dot">Bytes</span></span>
+          </a>
+          <p>Hire Smarter. Scale Faster.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Platform</div>
+          <div class="footer-links">
+            <a href="agents.html">AI Agents</a>
+            <a href="hire-a-human.html">Hire a Human</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Solutions</div>
+          <div class="footer-links">
+            <a href="agents.html">Finance</a>
+            <a href="agents.html">IT & DevOps</a>
+            <a href="agents.html">Support</a>
+            <a href="agents.html">Analytics</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Company</div>
+          <div class="footer-links">
+            <a href="about.html">Our Story</a>
+            <a href="contact.html">Careers</a>
+            <a href="mailto:info@orangebytes.io">Support</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2022–2026 Orange Bytes. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="mailto:info@orangebytes.io" aria-label="Email">📧</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/agents.js"></script>
+</body>
+</html>
