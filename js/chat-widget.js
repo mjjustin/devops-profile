@@ -19,33 +19,44 @@ class ChatWidget {
   extractWebsiteContext() {
     // Scrape all text on the current page to feed the LLM
     const bodyText = document.body.innerText.replace(/\s+/g, ' ').trim();
-    // System instruction
     return `You are Orange Bot, the helpful AI assistant for "Orange Bytes". Orange Bytes provides AI Agents and Human Consulting (DevOps/SRE) services. 
     You are currently chatting with a visitor on the company portfolio website.
-    Always be polite, concise, and professional. Output in plain text (no markdown formatting).
+    Always be polite, concise, and professional. 
+    FORMATTING RULE: Use bullet points and line-breaks when listing agents, features, or prices to make it easy to read. (Do not use heavy markdown, just new lines).
+    
+    CAPABILITY: You do NOT have the ability to send emails right now. If the user asks you to send an email, share contact info, reach out to the team, or hire someone, you must say: "Of course! Our team would love to chat. Please email us directly at sales@orangebytes.io and we will respond right away!"
+    
     If the user asks for a feature, service pricing, timeline, or contact info, reference this source content scraped from the website:
     --- BEGIN SITE CONTEXT ---
     ${bodyText.substring(0, 4000)} // Limiting to 4000 chars for prompt safety
-    --- END SITE CONTEXT ---
-    If you don't know the answer, politely ask them to leave their email or visit the contact page.
-    If the user provides an email or contact information, say "Thank you! I will forward this to the Orange Bytes team."`;
+    --- END SITE CONTEXT ---`;
   }
 
   init() {
     this.createWidgetHTML();
     this.bindEvents();
 
-    // Add initial greeting
-    setTimeout(() => {
-      this.addMessage("Hi there! I'm the Orange Bytes virtual assistant. How can I help you build or automate today?", 'bot');
-    }, 500);
+    // Restore history if user navigates across pages
+    const savedHTML = sessionStorage.getItem('orange_chat_html');
+    const savedMessages = sessionStorage.getItem('orange_chat_array');
+
+    if (savedHTML && savedMessages) {
+      this.messagesContainer.innerHTML = savedHTML;
+      this.messages = JSON.parse(savedMessages);
+      this.scrollToBottom();
+    } else {
+      // Add initial greeting only if no history exists
+      setTimeout(() => {
+        this.addMessage("Hi there! I'm the Orange Bytes virtual assistant. How can I help you build or automate today?", 'bot');
+      }, 500);
+    }
   }
 
   createWidgetHTML() {
     const container = document.createElement('div');
     container.className = 'chat-widget-container';
     container.innerHTML = `
-      <div class="chat-widget-window" id="chatWindow">
+      <div class="chat-widget-window" id="chatWindow" data-lenis-prevent>
         <div class="chat-widget-header">
           <div class="chat-widget-header-info">
             <div class="chat-widget-avatar">🤖</div>
@@ -56,7 +67,7 @@ class ChatWidget {
           </div>
           <button class="chat-widget-close" id="chatClose">&times;</button>
         </div>
-        <div class="chat-widget-messages" id="chatMessages"></div>
+        <div class="chat-widget-messages" id="chatMessages" data-lenis-prevent></div>
         <div class="chat-widget-input-area">
           <input type="text" class="chat-widget-input" id="chatInput" placeholder="Ask about our services..." autocomplete="off">
           <button class="chat-widget-send" id="chatSend">🚀</button>
@@ -107,6 +118,10 @@ class ChatWidget {
     if(sender !== 'bot' || this.messages.length > 0) {
         this.messages.push({ role: sender === 'bot' ? 'assistant' : 'user', content: text });
     }
+
+    // Save state so chat persists when navigating static pages
+    sessionStorage.setItem('orange_chat_html', this.messagesContainer.innerHTML);
+    sessionStorage.setItem('orange_chat_array', JSON.stringify(this.messages));
   }
 
   showTyping() {
@@ -138,10 +153,10 @@ class ChatWidget {
     this.addMessage(text, 'user');
     this.showTyping();
 
-    // Check if user is trying to submit an email
-    if (text.includes('@') && text.includes('.')) {
-        this.silentLeadCapture(text);
-    }
+    // Temporarily disabled lead capture
+    // if (text.includes('@') && text.includes('.')) {
+    //    this.silentLeadCapture(text);
+    // }
 
     try {
       const response = await this.queryGroqAPI();
@@ -185,15 +200,16 @@ class ChatWidget {
   }
 
   async silentLeadCapture(messageWithEmail) {
-      // Silently forward leads to Formspree
+      // Silently forward leads using precise FormData (matches original contact.js behavior)
       try {
+          const form = new FormData();
+          form.append('email', messageWithEmail);
+          form.append('message', 'Automated Lead from Chat Widget: ' + messageWithEmail);
+
           await fetch('https://formspree.io/f/xpznqkbr', {
               method: 'POST',
-              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-              body: JSON.stringify({
-                  email: messageWithEmail,
-                  message: "Lead captured automatically via Web Chat Widget."
-              })
+              body: form,
+              headers: { 'Accept': 'application/json' }
           });
       } catch (e) {
           // Ignore passive errors for silent lead capture

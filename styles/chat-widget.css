@@ -113,12 +113,29 @@
   gap: 12px;
 }
 
+/* Custom Webkit Scrollbar to force visibility */
+.chat-widget-messages::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-widget-messages::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.02); 
+}
+.chat-widget-messages::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1); 
+  border-radius: 10px;
+}
+.chat-widget-messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.2); 
+}
+
 .chat-message {
   max-width: 85%;
   padding: 12px 16px;
   border-radius: 16px;
   font-size: 14px;
   line-height: 1.5;
+  white-space: pre-wrap; /* Forces linebreaks to render properly */
+  word-wrap: break-word;
   animation: messageSlideIn 0.3s ease forwards;
 }
 
