@@ -1,0 +1,7 @@
+name = "orange-bytes-chat-proxy"
+main = "src/index.js"
+compatibility_date = "2024-04-16"
+
+# This prevents accidental pushes of local plaintext keys
+# Your real secret will be injected into Cloudflare directly
+# via the terminal command: npx wrangler secret put GROQ_API_KEY

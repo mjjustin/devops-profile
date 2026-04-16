@@ -2,9 +2,10 @@
  * Orange Bytes — LLM AI Chat Widget powered by Groq
  */
 
-// NOTE: Replace this securely in production, or restrict via proxy.
-// Leaving it transparent for immediate demo testing.
-const GROQ_API_KEY = 'gsk_YOUR_GROQ_API_KEY_HERE';
+// IMPORTANT: We now point to your secure Cloudflare Worker Proxy!
+// Keep this as "/api/chat" if testing locally via wrangler, or replace with your full *.workers.dev URL when deployed.
+let PROXY_URL = 'https://orange-bytes-chat-proxy.orange-bytes-chat-proxy.workers.dev';
+
 const MODEL = 'llama3-8b-8192'; // Blazing fast Llama 3 model
 
 class ChatWidget {
@@ -158,10 +159,6 @@ class ChatWidget {
   }
 
   async queryGroqAPI() {
-    if (GROQ_API_KEY.includes('YOUR_GROQ')) {
-        return "I am currently in Demo Mode because the Groq API key hasn't been added to my configuration yet! Add it in chat-widget.js to awaken me.";
-    }
-
     const payload = {
         model: MODEL,
         messages: [
@@ -172,16 +169,16 @@ class ChatWidget {
         max_tokens: 150
     };
 
-    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    // Send to our secure Cloudflare proxy instead of Groq directly!
+    const response = await fetch(PROXY_URL, {
         method: 'POST',
         headers: {
-            'Authorization': \`Bearer \${GROQ_API_KEY}\`,
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(payload)
     });
 
-    if (!response.ok) throw new Error(\`HTTP error! status: \${response.status}\`);
+    if (!response.ok) throw new Error(`HTTP error! status: ${ response.status } `);
     
     const data = await response.json();
     return data.choices[0].message.content;
