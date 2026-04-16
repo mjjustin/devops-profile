@@ -201,7 +201,15 @@ class ChatWidget {
   }
 }
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  new ChatWidget();
-});
+// Initialize the widget robustly (handles async or late-loading scenarios)
+function initChatWidget() {
+  if (!window.chatWidgetInstance) {
+    window.chatWidgetInstance = new ChatWidget();
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initChatWidget);
+} else {
+  initChatWidget();
+}
