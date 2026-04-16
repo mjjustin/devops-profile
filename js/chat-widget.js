@@ -24,7 +24,8 @@ class ChatWidget {
     Always be polite, concise, and professional. 
     FORMATTING RULE: Use bullet points and line-breaks when listing agents, features, or prices to make it easy to read. (Do not use heavy markdown, just new lines).
     
-    CAPABILITY: You do NOT have the ability to send emails right now. If the user asks you to send an email, share contact info, reach out to the team, or hire someone, you must say: "Of course! Our team would love to chat. Please email us directly at sales@orangebytes.io and we will respond right away!"
+    CAPABILITY: You HAVE the ability to contact the team and send emails behind the scenes! If the user asks you to send an email, share contact info, or reach out to the team, you must say: "Of course! I can message the team right now. Just provide your email address in this window."
+    If the user provides an email, say "Thank you! I have securely forwarded your message to the Orange Bytes team. We will be in touch shortly."
     
     If the user asks for a feature, service pricing, timeline, or contact info, reference this source content scraped from the website:
     --- BEGIN SITE CONTEXT ---
