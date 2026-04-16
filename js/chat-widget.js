@@ -6,7 +6,7 @@
 // Keep this as "/api/chat" if testing locally via wrangler, or replace with your full *.workers.dev URL when deployed.
 let PROXY_URL = 'https://orange-bytes-chat-proxy.orange-bytes-chat-proxy.workers.dev';
 
-const MODEL = 'llama3-8b-8192'; // Blazing fast Llama 3 model
+const MODEL = 'llama-3.1-8b-instant'; // Supported Lightning-fast Llama 3.1 model
 
 class ChatWidget {
   constructor() {
@@ -98,7 +98,7 @@ class ChatWidget {
 
   addMessage(text, sender) {
     const msgElement = document.createElement('div');
-    msgElement.className = \`chat-message \${sender}\`;
+    msgElement.className = `chat-message ${sender}`;
     msgElement.textContent = text;
     this.messagesContainer.appendChild(msgElement);
     this.scrollToBottom();
@@ -113,7 +113,7 @@ class ChatWidget {
     const typingElement = document.createElement('div');
     typingElement.className = 'typing-indicator';
     typingElement.id = 'typingIndicator';
-    typingElement.innerHTML = \`<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>\`;
+    typingElement.innerHTML = `<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>`;
     this.messagesContainer.appendChild(typingElement);
     this.scrollToBottom();
   }
